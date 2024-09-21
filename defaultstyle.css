@@ -54,3 +54,18 @@ nav a:hover {
   width: 50px;
   border-radius: 100%;
 }
+
+main{
+  margin: 8px;
+}
+
+.photoGallery{
+  border: 3px solid rgb(18, 18, 18);
+  background-color: #f5ad28;
+}
+.photoGalleryImage{
+  display: block;
+  width: 60rem;
+  height: 30rem;
+  margin: auto;
+}
