@@ -49,3 +49,8 @@ nav a:hover {
   float: right;
   margin-right: 50px;
 }
+.socialIcons {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
