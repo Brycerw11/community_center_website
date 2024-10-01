@@ -120,3 +120,33 @@ li {
 .flipImage{
   transform: scaleX(-1); /* Flips image */ 
 }
+
+.calendarContainer{
+  display: grid;
+  margin: 5px 10% 5px 10%; /* top right bottom left */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15rem;
+  grid-template-areas: "event1 event2 event3";
+  border: #111 solid 4px;
+}
+.featuredEvent{
+  margin: 3px;
+  border: #333 solid 4px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  grid-template-areas: "eventDateAndTime eventPicture" "eventDescription eventDescription";
+}
+.featuredEvent h2 {
+  font-size: 22px;
+}
+.fEventNameAndTime{grid-area: eventDateAndTime;}
+.fEventPicture{grid-area: eventPicture; overflow: hidden;}
+.fEventPicture > img{width: 100%; height: 100%;}
+.fEventDescription{grid-area: eventDescription; overflow: hidden;}
+
+.fEvent1{grid-area: event1;}
+.fEvent2{grid-area: event2;}
+.fEvent3{grid-area: event3;}

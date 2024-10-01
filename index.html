@@ -23,9 +23,11 @@
     </nav>
 
     <main>
-        <div class="photoGallery">  <!-- Div for Gallery Photos -->
+        <!-- Div for Gallery Photos -->
+        <div class="photoGallery">  
             <img id="PhotoGalleryPhoto" class="photoGalleryImage" src="https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg" alt="West-MEC Northeast Campus">
         </div>
+        <!-- Table to make control buttons for Gallery to work -->
         <table class="photoGalleryButtons" style="width: 70%">
             <tr>
                 <td>
@@ -36,8 +38,7 @@
                     <button id="PhotoGalleryRightButton"><img src="https://static.thenounproject.com/png/3809812-200.png" alt="Switch Photo to the Right"></button>
                 </td>
             </tr>
-          </table>
-        <div>
+        </table>
 
         <!-- Script to make the Photo Gallery Work -->
         <script>
@@ -67,9 +68,41 @@
             }
 
         </script>
-            
-                
+        
+        <br>
+
+        <!-- Mini Calendar -->
+        <h1>Featured Events</h1>
+        <div class="calendarContainer">
+            <div class="featuredEvent fEvent1">
+                <div class="fEventInfo fEventNameAndTime">
+                    <h2>FBLA State Leadership Competition</h2>
+                    <time datetime="2025-4-1">April 1st</time> to <time datetime="2025-4-3">April 3rd, 2025</time>
+                </div>
+                <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
+                <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>
+            </div>
+
+            <div class="featuredEvent fEvent2">
+                <div class="fEventInfo fEventNameAndTime">
+                    <h2>Event Name 2</h2>
+                    <p><time datetime="2025-4-23 13:30:00">April 23rd, 2025 <br> 1:30 PM MST</time></p>
+                </div>
+                <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
+                <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>
+            </div>
+
+            <div class="featuredEvent fEvent3">
+                <div class="fEventInfo fEventNameAndTime">
+                    <h2>Event Name 3</h2>
+                    <p><time datetime="2099-4-23 13:30:00">April 23rd, 2099 <br> 1:30 PM MST</time></p>
+                </div>
+                <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
+                <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>               
+            </div>
+           
         </div>
+        
     </main>
 
     <br>
