@@ -9,6 +9,17 @@
   float: right;
 }
 
+.standardIndent{
+  text-indent: 25px;
+}
+
+.orangeLink {
+  color: #f5a40f;
+}
+.orangeLink:visited{
+  color: #f5a40f;
+}
+
 header{
   background-color: #333;
   padding: 10px;
@@ -27,7 +38,8 @@ nav {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-    
+
+  z-index: 5;
 }
 
 .nav-item {
@@ -72,11 +84,24 @@ main{
   margin: 8px;
 }
 
+footer{
+  margin: 8px;
+}
+
+/* Start of Page-specific stuff like the Photo Gallery */
 .photoGallery{
   border: 3px solid rgb(18, 18, 18);
-  background-color: #f5ad28;
+  background-color: #f5a40f;
   margin: 0 8% 0 8%; /* top right bottom left */
 }
+/* Responsive layout - makes the photogallery smaller on smaller screens */
+@media (max-width: 1185px) { /* Occures when screen has a width that is under 118[5 pixels */
+  .photoGallery > img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .photoGalleryImage{
   display: block;
   width: 60rem;
@@ -105,6 +130,7 @@ li {
 .photoGalleryButtons{
   display: block;
   margin: 0 8% 0 8%;
+  z-index: 1;
 }
 .photoGallery button{
   display: block;
@@ -112,8 +138,6 @@ li {
   border-radius: 5px;
 }
 .photoGalleryButtons button > img{
-  width: 16* 5%;
-  height: 9* 5%;
   max-width: 50px;
   max-height: 50px;
 }
@@ -129,6 +153,16 @@ li {
   grid-template-areas: "event1 event2 event3";
   border: #111 solid 4px;
 }
+/* Responsive layout - makes the featured events calendar verticle on smaller screens */
+@media (max-width: 700px) { /* Occures when screen has a width that is under 700 pixels */
+  .calendarContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 15rem);
+    grid-template-areas: "event1" "event2" "event3";
+  }
+  .fEventPicture > img {width: 100%; height: 100%; max-width: 200px;}
+}
+
 .featuredEvent{
   margin: 3px;
   border: #333 solid 4px;
@@ -146,7 +180,21 @@ li {
 .fEventPicture{grid-area: eventPicture; overflow: hidden;}
 .fEventPicture > img{width: 100%; height: 100%;}
 .fEventDescription{grid-area: eventDescription; overflow: hidden;}
+.fEventInfo > p{font-size: 16px;}
 
 .fEvent1{grid-area: event1;}
 .fEvent2{grid-area: event2;}
 .fEvent3{grid-area: event3;}
+
+
+.whyUsContainer{
+  display: flex;
+  border: #333 solid 4px;
+  margin: 5px 10% 5px 10%; /* top right bottom left */
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.whyUsContainer > div{
+  padding: 5px;
+}

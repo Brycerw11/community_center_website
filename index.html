@@ -43,6 +43,7 @@
         <!-- Script to make the Photo Gallery Work -->
         <script>
             var photoNum = 0;
+            //Please crop all photos to be in a 16:9 aspect ratio
             var listOfPhotos = ["https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg", "./images/InstagramLogo.png", "./images/YouTubeLogo.png"];
             var listOfAltTexts = ["West-MEC Northeast Campus", "Instagram Logo", "Youtube Logo"];
             const leftButton = document.getElementById("PhotoGalleryLeftButton");
@@ -56,6 +57,7 @@
                     photoNum = listOfPhotos.length -1;
                 }
                 photo.src = String(listOfPhotos[photoNum]);
+                photo.alt= String(listOfAltTexts[photoNum])
             }
             rightButton.onclick = function(){
                 photoNum++; //It's ++ since it goes forwards in the cycle (right)
@@ -71,13 +73,14 @@
         
         <br>
 
-        <!-- Mini Calendar -->
-        <h1>Featured Events</h1>
+        <!-- Feature Events Calendar -->
+        <h1 class="standardIndent">Featured Events</h1>
+        <h3 class="standardIndent"><a class="orangeLink" href="./calendar.html">See Full Calendar</a></h3>
         <div class="calendarContainer">
             <div class="featuredEvent fEvent1">
                 <div class="fEventInfo fEventNameAndTime">
                     <h2>FBLA State Leadership Competition</h2>
-                    <time datetime="2025-4-1">April 1st</time> to <time datetime="2025-4-3">April 3rd, 2025</time>
+                    <p><time datetime="2025-4-1">April 1st</time> to <time datetime="2025-4-3">April 3rd, 2025</time></p>
                 </div>
                 <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
                 <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>
@@ -101,6 +104,14 @@
                 <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>               
             </div>
            
+        </div>
+
+        <!-- Why Us? Section -->
+        <h1 class="standardIndent">Why Us?</h1>
+        <div class="whyUsContainer">
+            <div>Test 1</div>
+            <div>Test 2</div>
+            <div>Test 3</div>
         </div>
         
     </main>
