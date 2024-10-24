@@ -44,7 +44,7 @@
         <script>
             var photoNum = 0;
             //Please crop all photos to be in a 16:9 aspect ratio
-            var listOfPhotos = ["https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg", "./images/SocialIcons/InstagramLogo.png", "./imagesYouTubeLogo.png"];
+            var listOfPhotos = ["https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg", "./images/SocialIcons/InstagramLogo.png", "./images/SocialIcons/YouTubeLogo.png"];
             var listOfAltTexts = ["West-MEC Northeast Campus", "Instagram Logo", "Youtube Logo"];
             const leftButton = document.getElementById("PhotoGalleryLeftButton");
             const rightButton = document.getElementById("PhotoGalleryRightButton");
@@ -52,21 +52,22 @@
             const photo = document.getElementById("PhotoGalleryPhoto");
 
             leftButton.onclick = function(){
-                photoNum--; //It's -- since it goes backwards in the cycle (left)
+                photoNum--; //Goes backwards in the cycle (left)
                 if(photoNum < 0){ //photoNum can't go negative
                     photoNum = listOfPhotos.length -1;
                 }
                 photo.src = String(listOfPhotos[photoNum]);
-                photo.alt= String(listOfAltTexts[photoNum])
+                photo.alt= listOfAltTexts[photoNum];
             }
             rightButton.onclick = function(){
-                photoNum++; //It's ++ since it goes forwards in the cycle (right)
+                photoNum++; //Goes forwards in the cycle (right)
                 /* listOfPhotos.length will always return 1 more than the id 
                 of the last number so it resets when it reaches listOfPhotos.length */
                 if(photoNum >= listOfPhotos.length){
                     photoNum = 0;
                 }
                 photo.src = String(listOfPhotos[photoNum]);
+                photo.alt = listOfAltTexts[photoNum];
             }
 
         </script>
@@ -82,7 +83,7 @@
                     <h2>FBLA State Leadership Competition</h2>
                     <p><time datetime="2025-4-1">April 1st</time> to <time datetime="2025-4-3">April 3rd, 2025</time></p>
                 </div>
-                <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
+                <div class="fEventInfo fEventPicture"><img src="./images/SocialIcons/FacebookLogo.png" alt=""></div>
                 <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>
             </div>
 
@@ -91,7 +92,7 @@
                     <h2>Event Name 2</h2>
                     <p><time datetime="2025-4-23 13:30:00">April 23rd, 2025 <br> 1:30 PM MST</time></p>
                 </div>
-                <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
+                <div class="fEventInfo fEventPicture"><img src="./images/SocialIcons/FacebookLogo.png" alt=""></div>
                 <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>
             </div>
 
@@ -100,7 +101,7 @@
                     <h2>Event Name 3</h2>
                     <p><time datetime="2099-4-23 13:30:00">April 23rd, 2099 <br> 1:30 PM MST</time></p>
                 </div>
-                <div class="fEventInfo fEventPicture"><img src="./images/FacebookLogo.png" alt=""></div>
+                <div class="fEventInfo fEventPicture"><img src="./images/SocialIcons/FacebookLogo.png" alt=""></div>
                 <div class="fEventInfo fEventDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nulla. Dolorum, cum nesciunt accusantium laudantium blanditiis sint rem animi! Porro neque doloribus minus tempore distinctio accusamus vel nobis impedit rerum?</div>               
             </div>
            
