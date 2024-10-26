@@ -191,13 +191,35 @@ li {
 
 
 .whyUsContainer{
-  display: flex;
+  display: grid;
   border: #333 solid 4px;
   margin: 5px 10% 5px 10%; /* top right bottom left */
-  align-content: center;
-  align-items: center;
-  justify-content: space-around;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  grid-template-areas: "whyUs1 whyUs2 whyUs3";
 }
-.whyUsContainer > div{
-  padding: 5px;
+.whyUsContainer > div{padding: 5px;}
+.whyUsContainer > div > h3{
+  font-size: 25px; 
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 0 12px #111;
+}
+.whyUs1 {
+  grid-area: whyUs1;
+  background-image: url("./images/MarketingImages/eventSpaceImage.webp");
+  background-size: 100%;
+}
+.whyUs2 {
+  grid-area: whyUs2;
+  background-image: url("./images/MarketingImages/convenientLocation.webp");
+  background-position: 30px;
+  background-size: 100%;
+}
+.whyUs3 {
+  grid-area: whyUs3;
+  background-image: url("./images/MarketingImages/meWhenSavings.jpg");
+  background-size: 100%;
 }
