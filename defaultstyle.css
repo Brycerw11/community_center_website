@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+}
+
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+
+.flipImage{
+    transform: scaleX(-1); /* Flips image */ 
+}
+  
+.standardIndent{
+    text-indent: 25px;
+}
+  
+.orangeLink {
+    color: #f5a40f;
+}
+.orangeLink:visited{
+    color: #f5a40f;
+}
+  
+header{
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+}
+  
+nav {
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+  
+    /* Default box color */
+    background-color: #333;
+  
+    /*Makes Header Stick to top of screen*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  
+    z-index: 5;
+}
+  
+.nav-item {
+    float: left;
+}
+    
+nav > a {
+    /* Make text white and centered, plus make all the boxes appear in the same line */
+    display: block;
+    color: white;
+    text-align: center;
+  
+    /* top right bottom left */
+    padding: 14px 16px;
+  
+    /* No underline */
+    text-decoration: none;
+}
+    
+/* Change the box color to #111 (black) on hover */
+nav a:hover {
+    background-color: #111;
+}
+  
+/* .socialLinks {
+    float: right;
+    margin-right: 50px;
+} */
+  
+main{
+    margin: 8px;
+}
+  
+footer{
+    margin: 8px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "contacts socials";
+    padding: 5px;
+}
+@media (max-width: 640px) {
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "contacts" "socials";
+    }
+    .footerSocialLinks > div {
+        float: none !important; 
+        width: fit-content;
+        margin: auto;
+    }
+}
+.footerContacts{
+    grid-area: contacts;
+}
+.footerSocialLinks{
+    grid-area: socials;
+    margin: 10px;
+}
+.footerSocialLinks > div {
+    display: block;
+    float: right;
+}
+/* Gets rid of the URL underline that appears between the social link icons */
+.footerSocialLinks a {
+    text-decoration: none;
+}
+.socialIcons{
+    margin: 1px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.emailUsIcon{
+    height: 35px;
+    width: 35px;
+}
+.callUsIcon{
+    height: 35px;
+    width: 35px;
+}
