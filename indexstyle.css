@@ -1,94 +1,4 @@
-/* @import url("./defaultstyle.css"); */
-
-*{
-  margin: 0;
-}
-
-.floatLeft{
-  float: left;
-}
-.floatRight{
-  float: right;
-}
-
-.standardIndent{
-  text-indent: 25px;
-}
-
-.orangeLink {
-  color: #f5a40f;
-}
-.orangeLink:visited{
-  color: #f5a40f;
-}
-
-header{
-  background-color: #333;
-  padding: 10px;
-  margin: 0;
-}
-
-nav {
-  margin: 0;
-  padding: 5px;
-  overflow: hidden;
-
-  /* Default box color */
-  background-color: #333;
-
-  /*Makes Header Stick to top of screen*/
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-
-  z-index: 5;
-}
-
-.nav-item {
-  float: left;
-}
-  
-nav > a {
-  /* Make text white and centered, plus make all the boxes appear in the same line */
-  display: block;
-  color: white;
-  text-align: center;
-
-  /* top right bottom left */
-  padding: 14px 16px;
-
-  /* No underline */
-  text-decoration: none;
-}
-  
-/* Change the box color to #111 (black) on hover */
-nav a:hover {
-  background-color: #111;
-}
-
-.socialLinks {
-  float: right;
-  margin-right: 50px;
-}
-
-/* Gets rid of the URL underline that appears between the social link icons */
-.socialLinks > a {
-  text-decoration: none;
-}
-
-.socialIcons {
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-}
-
-main{
-  margin: 8px;
-}
-
-footer{
-  margin: 8px;
-}
+@import url("./defaultstyle.css");
 
 /* Start of Page-specific stuff like the Photo Gallery */
 .photoGallery{
@@ -145,9 +55,6 @@ li {
 .photoGalleryButtons button > img{
   max-width: 50px;
   max-height: 50px;
-}
-.flipImage{
-  transform: scaleX(-1); /* Flips image */ 
 }
 
 .calendarContainer{
