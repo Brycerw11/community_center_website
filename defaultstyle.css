@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "OpenSans";
+    src:
+      local("OpenSans"),
+      url("./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+  
 *{
     margin: 0;
 }
@@ -129,4 +136,12 @@ footer{
 .callUsIcon{
     height: 35px;
     width: 35px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: "OpenSans";
+}
+
+.timesNewRoman{
+    font-family: 'Times New Roman', Times, serif;
 }
