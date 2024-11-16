@@ -31,12 +31,12 @@
         <!-- Table to make control buttons for Gallery to work -->
         <table class="photoGalleryButtons" style="width: 70%">
             <tr>
-                <td>
-                    <button id="PhotoGalleryLeftButton" class="flipImage"><img src="https://static.thenounproject.com/png/3809812-200.png" alt="Switch Photo to the Left"></button>
+                <td id="PhotoGalleryLeftButton">
+                    <img onclick="leftButtonClick()" class="flipImage" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Left">
                 </td>
                 <td style="width: auto;"></td>
-                <td>
-                    <button id="PhotoGalleryRightButton"><img src="https://static.thenounproject.com/png/3809812-200.png" alt="Switch Photo to the Right"></button>
+                <td id="PhotoGalleryRightButton">
+                    <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
                 </td>
             </tr>
         </table>
@@ -47,12 +47,10 @@
             //Please crop all photos to be in a 16:9 aspect ratio
             var listOfPhotos = ["https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg", "./images/SocialIcons/InstagramLogo.png", "./images/SocialIcons/YouTubeLogo.png"];
             var listOfAltTexts = ["West-MEC Northeast Campus", "Instagram Logo", "Youtube Logo"];
-            const leftButton = document.getElementById("PhotoGalleryLeftButton");
-            const rightButton = document.getElementById("PhotoGalleryRightButton");
 
             const photo = document.getElementById("PhotoGalleryPhoto");
 
-            leftButton.onclick = function(){
+            function leftButtonClick(){
                 photoNum--; //Goes backwards in the cycle (left)
                 if(photoNum < 0){ //photoNum can't go negative
                     photoNum = listOfPhotos.length -1;
@@ -60,7 +58,7 @@
                 photo.src = String(listOfPhotos[photoNum]);
                 photo.alt= listOfAltTexts[photoNum];
             }
-            rightButton.onclick = function(){
+            function rightButtonClick(){
                 photoNum++; //Goes forwards in the cycle (right)
                 /* listOfPhotos.length will always return 1 more than the id 
                 of the last number so it resets when it reaches listOfPhotos.length */

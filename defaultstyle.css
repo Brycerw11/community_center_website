@@ -4,6 +4,12 @@
       local("OpenSans"),
       url("./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Nunito";
+    src:
+      local("Nunito"),
+      url("./fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+}
   
 *{
     margin: 0;
@@ -68,6 +74,9 @@ nav > a {
   
     /* No underline */
     text-decoration: none;
+    font-size: 14px;
+    font-family: "Nunito";
+    font-weight: 500;
 }
     
 /* Change the box color to #111 (black) on hover */
@@ -138,7 +147,7 @@ footer{
     width: 35px;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, li{
     font-family: "OpenSans";
 }
 

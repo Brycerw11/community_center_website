@@ -50,14 +50,14 @@ li {
   margin: 0 8% 0 8%;
   z-index: 1;
 }
-.photoGallery button{
-  display: block;
+.photoGalleryButtons td{
   margin: 3px;
-  border-radius: 5px;
-}
-.photoGalleryButtons button > img{
   max-width: 50px;
   max-height: 50px;
+}
+.photoGalleryButtons td > img{
+  width: 100%;
+  height: 100%;
 }
 
 .calendarContainer{
