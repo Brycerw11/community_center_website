@@ -30,17 +30,20 @@
                 <img onclick="leftButtonClick()" class="flipImage" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Left">
             </div>
 
-            <img id="PhotoGalleryPhoto" class="photoGalleryImage" src="https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg" alt="West-MEC Northeast Campus">
+            <img id="PhotoGalleryPhoto" class="photoGalleryImage" src="./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto1.jpg" alt="West-MEC Northeast Campus">
             
             <div id="PhotoGalleryRightButton" class="photoGalleryButtons">
                 <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
             </div>
         </div>
 
-        <div class="photoGalleryControls">
-            <div class="imgSwitchBarContainer">
-                <div id="imgSwitchBar">
+        <div class="photoGalleryControls" id="photoGalleryControls">
+            <div class="gallerySwitchBarContainer pgControlOption" id="gallerySwitchBarContainer">
+                <div id="gallerySwitchBar">
                 </div>
+            </div>
+            <div class="pgControlOption pgControlButton">
+                <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
             </div>
         </div>
 
@@ -48,11 +51,12 @@
         <script>
             var photoNum = 0;
             //Please crop all photos to be in a 16:9 aspect ratio
-            var listOfPhotos = ["https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg", "./images/SocialIcons/InstagramLogo.png", "./images/SocialIcons/YouTubeLogo.png"];
-            var listOfAltTexts = ["West-MEC Northeast Campus", "Instagram Logo", "Youtube Logo"];
+            var listOfPhotos = ["./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto1.jpg", "./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto2.jpg", "./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto3.png"];
+            var listOfAltTexts = ["West-MEC Northeast Campus Exterior", "West-MEC Northeast Campus Exterior", "West-MEC Northeast Campus Exterior"];
 
             const photo = document.getElementById("PhotoGalleryPhoto");
-            const switchBar = document.getElementById("imgSwitchBar");
+            const switchBar = document.getElementById("gallerySwitchBar");
+            const switchBarParent = document.getElementById("gallerySwitchBarContainer");
 
             function leftButtonClick(){
 
@@ -79,23 +83,35 @@
                 timerTime = -500; //Resets timer and gives you extra time when you choose the image yourself
             }
 
+            function autoShift(){
+                // Same as rightButtonClick but it doesn't temporarially pause the timer
+
+                photoNum++; //Goes forwards in the cycle (right)
+                /* listOfPhotos.length will always return 1 more than the id 
+                of the last number so it resets when it reaches listOfPhotos.length */
+                if(photoNum >= listOfPhotos.length){
+                    photoNum = 0;
+                }
+                photo.src = String(listOfPhotos[photoNum]);
+                photo.alt = listOfAltTexts[photoNum];
+            }
+
             var timerTime = 0; //one timerTime = 10ms or 1centisecond
             let timerObj = setInterval(moveGalleryForward, 10);
-
             var timerResetTime = 400; //400 = 400centiseconds or 4 seconds
+
             function moveGalleryForward(){
                 timerTime++;
                 if(timerTime > timerResetTime){ 
-                    rightButtonClick();
-
-                    console.log(timerTime.toString() + "px")
-
-                    console.log(Math.abs(timerResetTime * (timerTime / timerResetTime)).toString()+"px")
+                    autoShift();
 
                     timerTime = 0;
                 }
 
-                switchBar.style.width = Math.abs(timerTime);
+                var switchBarLength = (200 * timerTime / timerResetTime) //The 200 is the total width of the bar
+
+                switchBar.style.width = switchBarLength.toString() + "px";
+
             }
 
         </script>
@@ -178,4 +194,7 @@
         </div>
     </footer>
 </body>
+
+<script src="./scripts/galleryAutoControlsLocation.js"></script>
+
 </html>
