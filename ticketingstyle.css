@@ -22,3 +22,17 @@ label{
     font-weight: 350;
     font-size: 14px;
 }
+
+h6 {
+    font-size: .75em;
+}
+
+.threeQuartersInputBox {
+    width: 122px;
+}
+.halfInputBox {
+    width: 81px;
+}
+.doubleInputBox {
+    width: 324px;
+}

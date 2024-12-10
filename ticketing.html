@@ -33,31 +33,93 @@
             <fieldset>
                 <legend>Event Details:</legend>
 
+                <h3>Event Details:</h3>
+
                 <!-- Event Selection -->
                 <label for="eventSelection">Please Select the Event:</label>
-                <select id="eventSelection" name="eventSelection">
+                <select required id="eventSelection" name="eventSelection">
+                    <option value="none" selected disabled hidden>Please Select an Event</option>
                     <option value="event1">Event 1</option>
                     <option value="event2">Event 2</option>
                     <option value="event3">Event 3</option>
                 </select>
-                <h6><a href="./calendar.html" target="_blank">Click Here to Check The Event Claendar</a></h6>
+                <h5><a href="./calendar.html" target="_blank" class="orangeLink">Click Here to Check The Event Claendar</a></h5>
 
-                <h4>Event Details:</h3>
-                <h5>Event Name:</h5> <span class="eventDetails">{Please Select An Event}</span>
-                <h5>Event Date:</h5> <span class="eventDetails">{Please Select An Event}</span>
-                <h5>Event Description:</h5> <span class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Name:</h4> <span class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Date:</h4> <span class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Description:</h4> <span class="eventDetails">{Please Select An Event}</span>
 
             </fieldset>
 
             <fieldset>
                 <legend>Ticket Details:</legend>
+                <h3>Please Select the Number of Tickets</h3>
+                <h4>Persons at or under the age of 15 qualify for Child Tickets</h4>
+                
+                <label for="adultTixNumSelect">Number Of Adult Tickets:</label>
+                <input required type="number" name="adultTixNumSelect" id="adultTixNumSelect" min="1" max="99">
+                <label for="childTixNumSelect">Number Of Child Tickets:</label>
+                <input required type="number" name="childTixNumSelect" id="childTixNumSelect" min="1" max="99">
+                <h6>There's a maximum of 99 Adult Tickets and 99 Child Tickets per form submittion</h6>
 
             </fieldset>
 
             <fieldset>
                 <legend>Personal Details:</legend>
 
+                <h3>Primary Ticket Holder Information</h3>
+                <label for="firstNameInput">First Name: </label>
+                <input required type="text" id="firstNameInput" name="firstNameInput" class="threeQuartersInputBox">
+                <label for="lastNameInput">Last Name: </label>
+                <input required type="text" id="lastNameInput" name="lastNameInput" class="threeQuartersInputBox">
+                <br>
+                <label for="emailInput">Contact Email Address: </label>
+                <input type="email" id="emailInput" name="emailInput" class="doubleInputBox">
+                <br>
+                <label for="phoneNumInput">Contact Phone Number: </label>
+                <input type="tel" id="phoneNumInput" name="phoneNumInput" class="">
+
+                <br>
+                <br>
+
+                <h3>Billing Name and Address</h3>
+                <label for="billingFirstNameInput">Billing First Name: </label>
+                <input required type="text" id="billingFirstNameInput" name="billingFirstNameInput" class="threeQuartersInputBox">
+                <label for="billingLastNameInput">Billing Last Name: </label>
+                <input required type="text" id="billingLastNameInput" name="billingLastNameInput" class="threeQuartersInputBox">
+                
+                <br>
+                <label for="billingEmailInput">Billing Email Address: </label>
+                <input required type="email" id="billingEmailInput" name="billingEmailInput" class="doubleInputBox">
+                
+                <br>
+                <br>
+                <label for="streetAddressInput">Street Address: </label>
+                <input required type="text" id="streetAddressInput" name="streetAddressInput" class="doubleInputBox">
+                
+                <br>
+                <label for="cityInput">City: </label>
+                <input required type="text" id="cityInput" name="cityInput" class="halfInputBox">
+                <label for="countryInput">Country: </label>
+                <input required type="text" id="countryInput" name="countryInput" class="halfInputBox">
+                
+                <br>
+                <label for="stateProvinceInput">State / Province: </label>
+                <input required type="text" id="stateProvinceInput" name="stateProvinceInput" class="halfInputBox">
+
+                <br>
+                <label for="zipInput">ZIP / Postal Code: </label>
+                <input required type="text" id="zipInput" name="zipInput" class="halfInputBox">
+
             </fieldset>
+
+            <fieldset>
+                <legend>Submit / Reset Form</legend>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+
         </form>
     </main>
 
