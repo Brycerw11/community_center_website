@@ -2,27 +2,73 @@
 
 /* Start of Page-specific stuff like the Photo Gallery */
 .photoGallery{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   border: 3px solid rgb(18, 18, 18);
   background-color: #f5a40f;
-  margin: 0 8% 0 8%; /* top right bottom left */
+
+  max-width: 85%;
+  margin: auto; /* top right bottom left */
   border-radius: 16px;
   overflow: hidden;
-}
-/* Responsive layout - makes the photogallery smaller on smaller screens */
-@media (max-width: 1185px) { /* Occures when screen has a width that is under 118[5 pixels */
-  .photoGallery > img{
-    width: 100%;
-    height: 100%;
-    max-height: 530px;
-  }
 }
 
 .photoGalleryImage{
   display: block;
-  width: 60rem;
-  height: 30rem;
+  width: 85%;
+  height: fit-content;
+
+  max-width: 1400px;
+
+  flex-shrink: 1;
+
   margin: auto;
   margin-bottom: 0;
+}
+
+.photoGalleryButtons{ /* The div that it the button */
+  margin: 3px 20px;
+
+  z-index: 1;
+
+  max-width: 50px;
+}
+.photoGalleryButtons > img{
+  width: 100%;
+  height: fit-content;
+}
+
+.photoGalleryControls{
+  border: 3px solid rgb(18, 18, 18);
+  background-color: #f5a40f;
+
+  padding: 5px;
+
+  width: fit-content;
+  border-radius: 15px;
+}
+
+.imgSwitchBarContainer{
+  height: 20px;
+  width: 200px;
+
+  background-color: #808080;
+  border-radius: 15px;
+}
+
+/* Responsive layout - makes the photogallery smaller on smaller screens */
+@media (max-width: 1185px) { /* Occures when screen has a width that is under 118[5 pixels */
+
+  .photoGallery > img{
+    width: calc(100% - 125px);
+    height: 100%;
+    max-height: 530px;
+  }
+  .photoGalleryButtons{
+    margin: 3px;
+  }
 }
 
 p {
@@ -43,21 +89,6 @@ h2 {
 li {
   margin-left: 25px;
   font-size: 16px;
-}
-
-.photoGalleryButtons{
-  display: block;
-  margin: 0 8% 0 8%;
-  z-index: 1;
-}
-.photoGalleryButtons td{
-  margin: 3px;
-  max-width: 50px;
-  max-height: 50px;
-}
-.photoGalleryButtons td > img{
-  width: 100%;
-  height: 100%;
 }
 
 .calendarContainer{

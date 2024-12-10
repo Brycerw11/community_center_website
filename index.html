@@ -25,21 +25,24 @@
 
     <main>
         <!-- Div for Gallery Photos -->
-        <div class="photoGallery">  
+        <div class="photoGallery"> 
+            <div id="PhotoGalleryLeftButton" class="photoGalleryButtons">
+                <img onclick="leftButtonClick()" class="flipImage" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Left">
+            </div>
+
             <img id="PhotoGalleryPhoto" class="photoGalleryImage" src="https://www.nc3.net/wp-content/uploads/2017/11/northeast-campus.jpg" alt="West-MEC Northeast Campus">
+            
+            <div id="PhotoGalleryRightButton" class="photoGalleryButtons">
+                <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
+            </div>
         </div>
-        <!-- Table to make control buttons for Gallery to work -->
-        <table class="photoGalleryButtons" style="width: 70%">
-            <tr>
-                <td id="PhotoGalleryLeftButton">
-                    <img onclick="leftButtonClick()" class="flipImage" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Left">
-                </td>
-                <td style="width: auto;"></td>
-                <td id="PhotoGalleryRightButton">
-                    <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
-                </td>
-            </tr>
-        </table>
+
+        <div class="photoGalleryControls">
+            <div class="imgSwitchBarContainer">
+                <div id="imgSwitchBar">
+                </div>
+            </div>
+        </div>
 
         <!-- Script to make the Photo Gallery Work -->
         <script>
@@ -49,16 +52,21 @@
             var listOfAltTexts = ["West-MEC Northeast Campus", "Instagram Logo", "Youtube Logo"];
 
             const photo = document.getElementById("PhotoGalleryPhoto");
+            const switchBar = document.getElementById("imgSwitchBar");
 
             function leftButtonClick(){
+
                 photoNum--; //Goes backwards in the cycle (left)
                 if(photoNum < 0){ //photoNum can't go negative
                     photoNum = listOfPhotos.length -1;
                 }
                 photo.src = String(listOfPhotos[photoNum]);
                 photo.alt= listOfAltTexts[photoNum];
+
+                timerTime = -500; //Resets timer and gives you extra time when you choose the image yourself
             }
             function rightButtonClick(){
+
                 photoNum++; //Goes forwards in the cycle (right)
                 /* listOfPhotos.length will always return 1 more than the id 
                 of the last number so it resets when it reaches listOfPhotos.length */
@@ -67,6 +75,27 @@
                 }
                 photo.src = String(listOfPhotos[photoNum]);
                 photo.alt = listOfAltTexts[photoNum];
+
+                timerTime = -500; //Resets timer and gives you extra time when you choose the image yourself
+            }
+
+            var timerTime = 0; //one timerTime = 10ms or 1centisecond
+            let timerObj = setInterval(moveGalleryForward, 10);
+
+            var timerResetTime = 400; //400 = 400centiseconds or 4 seconds
+            function moveGalleryForward(){
+                timerTime++;
+                if(timerTime > timerResetTime){ 
+                    rightButtonClick();
+
+                    console.log(timerTime.toString() + "px")
+
+                    console.log(Math.abs(timerResetTime * (timerTime / timerResetTime)).toString()+"px")
+
+                    timerTime = 0;
+                }
+
+                switchBar.style.width = Math.abs(timerTime);
             }
 
         </script>
