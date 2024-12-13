@@ -16,6 +16,10 @@
   overflow: hidden;
 }
 
+/* #photoGalleryPhotoParentDiv{
+
+} */
+
 .photoGalleryImage{
   display: block;
   width: 85%;
@@ -27,6 +31,10 @@
 
   margin: auto;
   margin-bottom: 0;
+  
+  /* transition: 0.3s; */
+
+  background-image: url(./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto2.jpg);
 }
 
 .photoGalleryButtons{ /* The div that it the button */
@@ -67,6 +75,11 @@
   left: calc(var(--true-window-width) - var(--alignment-width));
 
   filter: opacity(50%);
+
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-property: filter; /* ensures the transition only affects the opacity filter an nothing else */
+  -webkit-transition-property: filter; /* ensures the transition only affects the opacity filter an nothing else */
 }
 .photoGalleryControls:hover{
   filter: opacity(100%);
@@ -98,13 +111,15 @@
   width: 50px;
   height: 100%;
 
+  transition: 0.1s;
+
   border-radius: 10px;
 }
 
 /* Responsive layout - makes the photogallery smaller on smaller screens */
 @media (max-width: 1185px) { /* Occures when screen has a width that is under 118[5 pixels */
 
-  .photoGallery > img{
+  #PhotoGalleryPhoto{
     width: calc(100% - 125px);
     height: 100%;
     max-height: 530px;

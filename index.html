@@ -30,14 +30,16 @@
                 <img onclick="leftButtonClick()" class="flipImage" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Left">
             </div>
 
-            <img id="PhotoGalleryPhoto" class="photoGalleryImage" src="./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto1.jpg" alt="West-MEC Northeast Campus">
-            
+            <!-- <div id="photoGalleryPhotoParentDiv"> -->
+                <img id="PhotoGalleryPhoto" class="photoGalleryImage" src="./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto1.jpg" alt="West-MEC Northeast Campus">
+            <!-- </div> -->
+                        
             <div id="PhotoGalleryRightButton" class="photoGalleryButtons">
                 <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
             </div>
         </div>
 
-        <div class="photoGalleryControls" id="photoGalleryControls">
+        <div class="photoGalleryControls threeDecisecondTransition" id="photoGalleryControls">
             <div class="gallerySwitchBarContainer pgControlOption" id="gallerySwitchBarContainer">
                 <div id="gallerySwitchBar">
                 </div>
@@ -67,7 +69,7 @@
                 photo.src = String(listOfPhotos[photoNum]);
                 photo.alt= listOfAltTexts[photoNum];
 
-                timerTime = -500; //Resets timer and gives you extra time when you choose the image yourself
+                timerTime = 0; //Resets timer and gives you extra time when you choose the image yourself
             }
             function rightButtonClick(){
 
@@ -80,11 +82,11 @@
                 photo.src = String(listOfPhotos[photoNum]);
                 photo.alt = listOfAltTexts[photoNum];
 
-                timerTime = -500; //Resets timer and gives you extra time when you choose the image yourself
+                timerTime = 0; //Resets timer and gives you extra time when you choose the image yourself
             }
 
             function autoShift(){
-                // Same as rightButtonClick but it doesn't temporarially pause the timer
+                // Same as rightButtonClick but it doesn't reset the timer
 
                 photoNum++; //Goes forwards in the cycle (right)
                 /* listOfPhotos.length will always return 1 more than the id 
