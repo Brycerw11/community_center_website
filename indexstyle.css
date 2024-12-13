@@ -66,8 +66,12 @@
   top: -50px;
   left: calc(var(--true-window-width) - var(--alignment-width));
 
-  filter: opacity(75%);
+  filter: opacity(50%);
 }
+.photoGalleryControls:hover{
+  filter: opacity(100%);
+}
+
 .pgControlOption{
   margin: 3px;
 }

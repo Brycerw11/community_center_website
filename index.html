@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="pgControlOption pgControlButton">
-                <img onclick="rightButtonClick()" src="./images/PhotoGallery/arrowButtonRight.svg" alt="Switch Photo to the Right">
+                <img onclick="pauseAutoShift()" src="./images/PhotoGallery/pauseIcon.svg" alt="Switch Photo to the Right">
             </div>
         </div>
 
@@ -96,11 +96,25 @@
                 photo.alt = listOfAltTexts[photoNum];
             }
 
+            var isTimerPaused = false;
+
+            function pauseAutoShift(){
+                if(isTimerPaused){
+                    isTimerPaused = false;
+                }
+                else{
+                    isTimerPaused = true;
+                }
+            }
+
             var timerTime = 0; //one timerTime = 10ms or 1centisecond
             let timerObj = setInterval(moveGalleryForward, 10);
             var timerResetTime = 400; //400 = 400centiseconds or 4 seconds
 
             function moveGalleryForward(){
+                if(isTimerPaused){
+                    return;
+                }
                 timerTime++;
                 if(timerTime > timerResetTime){ 
                     autoShift();
