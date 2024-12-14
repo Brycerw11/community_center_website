@@ -8,6 +8,63 @@
     <link rel="stylesheet" href="./pagestyles/indexstyle.css">
 
     <title>Contact Us - West-MEC Community Center</title>
+
+    <style>
+        section {
+            padding: 10px;
+            margin: 20px 0px;
+        }
+        section > p{margin-left: 10px;}
+        section > a{
+            font-size: large;
+            text-decoration: underline dashed;
+            margin-left: 15px;
+        }
+        .social-container {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas:"box-1 box-2"
+                                "box-3 box-4"
+                                "box-5 box-5";
+        }
+        .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-1 {
+            grid-area: box-1;
+            color: white;
+            background-color: cornflowerblue;
+            border-top-left-radius: 20px;
+        }
+        .box-2 {
+            grid-area: box-2;
+            color: cyan;
+            background-color: blue;
+            border-top-right-radius: 20px;
+        }
+        .box-3 {
+            grid-area: box-3;
+            color: purple;
+            background-color: orange;
+        }
+        .box-4 {
+            grid-area: box-4;
+            color: white;
+            background-color: cadetblue;
+        }
+        .box-5 {
+            grid-area: box-5;
+            color: white;
+            background-color: red;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .white-background {background-color: white;}
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +81,64 @@
     </nav>
 
     <main>
-        
+        <h1>Contact Us</h1>
+        <section>
+            <h3>West-MEC NEC:</h3>
+            <p>1617 W. Williams Drive</p>
+            <p>Phoenix, AZ 85027</p>
+        </section>
+        <section>
+            <h3>Emails:</h3>
+            <p>Campus Administrator: David Svorinic</p>
+            <a href=”mailto:example@west-mec.org”>Send an email</a>
+            <p>Assistant Campus Administrator: Kristin Casillas</p>
+            <a href=”mailto:example@west-mec.org”>Send an email</a>
+        </section>
+        <section>
+            <h3>Phone Numbers:</h3>
+            <p>
+                NEC Main Line & Attendance:<br>
+                (623)435-4920<br>
+                <br>
+                District Office (Main):<br>
+                (623)738-0022
+            </p>
+        </section>
+        <section>
+            <h3>Socials:</h3>
+            <strong class="social-container">
+                <div class="box-1 flex">
+                    <p>Facebook</p>
+                    <a target="_blank" href="https://www.facebook.com/westmec/">
+                        <img class="socialIcons white-background" src="./images/SocialIcons/FacebookLogo.png">
+                    </a>
+                </div>
+                <div class="box-2 flex">
+                    <p>Twitter</p>
+                    <a target="_blank" href="http://www.twitter.com/">
+                        <img class="socialIcons white-background" src="./images/SocialIcons/TwitterLogo.png">
+                    </a>
+                </div>
+                <div class="box-3 flex">
+                    <p>Instagram</p>
+                    <a target="_blank" href="http://www.instagram.com/">
+                        <img class="socialIcons white-background" src="./images/SocialIcons/InstagramLogo.png">
+                    </a>
+                </div>
+                <div class="box-4 flex">
+                    <p>LinkedIn</p>
+                    <a target="_blank" href="http://www.linkedin.com/">
+                        <img class="socialIcons white-background" src="./images/SocialIcons/LinkedInLogo.png">
+                    </a>
+                </div>
+                <div class="box-5 flex">
+                    <p>YouTube</p>
+                    <a target="_blank" href="http://www.youtube.com/">
+                        <img class="socialIcons white-background" src="./images/SocialIcons/YouTubeLogo.png">
+                    </a>
+                </div>
+            </strong>
+        </section>
     </main>
 
     <hr class="footerDivider">
