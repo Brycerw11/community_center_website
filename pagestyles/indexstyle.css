@@ -1,4 +1,4 @@
-@import url("./defaultstyle.css");
+@import url("../defaultstyle.css");
 
 /* Start of Page-specific stuff like the Photo Gallery */
 .photoGallery{
@@ -16,10 +16,6 @@
   overflow: hidden;
 }
 
-/* #photoGalleryPhotoParentDiv{
-
-} */
-
 .photoGalleryImage{
   display: block;
   width: 85%;
@@ -31,10 +27,6 @@
 
   margin: auto;
   margin-bottom: 0;
-  
-  /* transition: 0.3s; */
-
-  background-image: url(./images/PhotoGallery/PhotoGalleryPhotos/West-MEC_NEC_ExteriorPhoto2.jpg);
 }
 
 .photoGalleryButtons{ /* The div that it the button */
@@ -78,8 +70,10 @@
 
   transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
   transition-property: filter; /* ensures the transition only affects the opacity filter an nothing else */
-  -webkit-transition-property: filter; /* ensures the transition only affects the opacity filter an nothing else */
+  -webkit-transition-property: filter;
+  -moz-transition-property: filter;
 }
 .photoGalleryControls:hover{
   filter: opacity(100%);
@@ -112,6 +106,8 @@
   height: 100%;
 
   transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
 
   border-radius: 10px;
 }
@@ -211,17 +207,17 @@ li {
 }
 .whyUs1 {
   grid-area: whyUs1;
-  background-image: url("./images/MarketingImages/eventSpaceImage.webp");
+  background-image: url("../images/MarketingImages/eventSpaceImage.webp");
   background-size: 100%;
 }
 .whyUs2 {
   grid-area: whyUs2;
-  background-image: url("./images/MarketingImages/convenientLocation.webp");
+  background-image: url("../images/MarketingImages/convenientLocation.webp");
   background-position: 30px;
   background-size: 100%;
 }
 .whyUs3 {
   grid-area: whyUs3;
-  background-image: url("./images/MarketingImages/meWhenSavings.jpg");
+  background-image: url("../images/MarketingImages/meWhenSavings.jpg");
   background-size: 100%;
 }

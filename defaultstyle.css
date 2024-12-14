@@ -77,6 +77,8 @@ nav > a {
     font-size: 14px;
     font-family: "Nunito";
     font-weight: 500;
+
+    border-radius: 8px;
 }
     
 /* Change the box color to #111 (black) on hover */
@@ -84,20 +86,15 @@ nav a:hover {
     background-color: #111;
 }
   
-/* .socialLinks {
-    float: right;
-    margin-right: 50px;
-} */
-  
 main{
     margin: 8px;
 }
-  
+
+.footerDivider{
+    margin-top: 24px;
+}
 footer{
     margin: 8px;
-}
-
-footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
