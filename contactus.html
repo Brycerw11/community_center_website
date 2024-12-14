@@ -37,33 +37,37 @@
         .box-1 {
             grid-area: box-1;
             color: white;
-            background-color: cornflowerblue;
+            background-image: linear-gradient(blue, cornflowerblue);
             border-top-left-radius: 20px;
         }
         .box-2 {
             grid-area: box-2;
-            color: cyan;
-            background-color: blue;
+            color: white;
+            background-image: linear-gradient(deepskyblue, lightblue);
             border-top-right-radius: 20px;
         }
         .box-3 {
             grid-area: box-3;
-            color: purple;
-            background-color: orange;
+            color: blueviolet;
+            background-image: linear-gradient(orange, khaki);
         }
         .box-4 {
             grid-area: box-4;
-            color: white;
-            background-color: cadetblue;
+            color: black;
+            background-image: linear-gradient(cadetblue, lightblue);
         }
         .box-5 {
             grid-area: box-5;
             color: white;
-            background-color: red;
+            background-image: linear-gradient(red, hotpink);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
-        .white-background {background-color: white;}
+        .social-background {
+            background-color: white;
+            border: 4px white solid;
+        }
+        .social-background:hover {border: 4px lime solid;}
     </style>
 </head>
 <body>
@@ -110,31 +114,31 @@
                 <div class="box-1 flex">
                     <p>Facebook</p>
                     <a target="_blank" href="https://www.facebook.com/westmec/">
-                        <img class="socialIcons white-background" src="./images/SocialIcons/FacebookLogo.png">
+                        <img class="socialIcons social-background" src="./images/SocialIcons/FacebookLogo.png">
                     </a>
                 </div>
                 <div class="box-2 flex">
                     <p>Twitter</p>
                     <a target="_blank" href="http://www.twitter.com/">
-                        <img class="socialIcons white-background" src="./images/SocialIcons/TwitterLogo.png">
+                        <img class="socialIcons social-background" src="./images/SocialIcons/TwitterLogo.png">
                     </a>
                 </div>
                 <div class="box-3 flex">
                     <p>Instagram</p>
                     <a target="_blank" href="http://www.instagram.com/">
-                        <img class="socialIcons white-background" src="./images/SocialIcons/InstagramLogo.png">
+                        <img class="socialIcons social-background" src="./images/SocialIcons/InstagramLogo.png">
                     </a>
                 </div>
                 <div class="box-4 flex">
                     <p>LinkedIn</p>
                     <a target="_blank" href="http://www.linkedin.com/">
-                        <img class="socialIcons white-background" src="./images/SocialIcons/LinkedInLogo.png">
+                        <img class="socialIcons social-background" src="./images/SocialIcons/LinkedInLogo.png">
                     </a>
                 </div>
                 <div class="box-5 flex">
                     <p>YouTube</p>
                     <a target="_blank" href="http://www.youtube.com/">
-                        <img class="socialIcons white-background" src="./images/SocialIcons/YouTubeLogo.png">
+                        <img class="socialIcons social-background" src="./images/SocialIcons/YouTubeLogo.png">
                     </a>
                 </div>
             </strong>
