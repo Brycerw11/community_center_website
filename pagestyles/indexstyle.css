@@ -196,6 +196,12 @@ li {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 200px;
   grid-template-areas: "whyUs1 whyUs2 whyUs3";
+
+  overflow: hidden;
+  
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
 }
 .whyUsContainer > div{padding: 5px;}
 .whyUsContainer > div > h3{
@@ -204,6 +210,14 @@ li {
   text-align: center;
   font-weight: 600;
   text-shadow: 0 0 12px #111;
+}
+@media (max-width: 700px) {
+  .whyUsConatainer {
+    margin: 5px 7% 5px 7%;
+  }
+  .whyUsContainer > div > h3{
+    font-size: 18px;
+  }
 }
 .whyUs1 {
   grid-area: whyUs1;
