@@ -60,14 +60,24 @@ var timerTime = 0; //one timerTime = 10ms or 1centisecond
 let timerObj = setInterval(moveGalleryForward, 10);
 var timerResetTime = 400; //400 = 400centiseconds or 4 seconds
 
+const transitionTimerStartValue = 30; //10 = .1 second transition
+var transitionTimer = transitionTimerStartValue; 
+
 function moveGalleryForward(){
     if(isTimerPaused){
         return;
     }
+    if (switchBar.classList.contains("tempTransition") && transitionTimer <= 0){
+	    switchBar.classList.toggle("tempTransition"); //Remove transition
+    }
+    else if (transitionTimer >= 0){ transitionTimer--; }
+    
     timerTime++;
     if(timerTime > timerResetTime){ 
-        autoShift();
-
+        autoShift(); //Shift Photo
+	    transitionTimer = transitionTimerStartValue; //reset transition timer
+	    switchBar.classList.toggle("tempTransition"); //start transition
+        
         timerTime = 0;
     }
 
