@@ -72,6 +72,7 @@
             background-color: darkorange;
             border: none;
             border-radius: 10px;
+            cursor: pointer;
         }
         button:hover {border: 1px white solid;}
         button:active {border: 1px black solid; background-color: white;}
@@ -123,9 +124,14 @@
         <br>
         <div class="calendar">
             <div class="header">
-                <button><img src="https://static.thenounproject.com/png/3809812-200.png" class="button-img flipImage"></button>
-                <strong>October 2024</strong>
-                <button><img src="https://static.thenounproject.com/png/3809812-200.png" class="button-img"></button>
+                <button>
+                    <img onclick="monthBack()" src="https://static.thenounproject.com/png/3809812-200.png" class="button-img flipImage">
+                </button>
+                <strong id="calendarMonth">January</strong>
+                <strong id="calendarYear">2025</strong>
+                <button>
+                    <img onclick="monthForward()" src="https://static.thenounproject.com/png/3809812-200.png" class="button-img">
+                </button>
             </div>
             <div class="weeks">
                 <strong>Sun</strong>
@@ -138,6 +144,7 @@
             </div>
             <div class="days">29</div>
             <div class="days">30</div>
+            <div class="days">31</div>
             <div class="days">1</div>
             <div class="days">2</div>
             <div class="days">3</div>
@@ -170,7 +177,6 @@
             <div class="days">30</div>
             <div class="days">31</div>
             <div class="days">1</div>
-            <div class="days">2</div>
             <div class="bottom"></div>
         </div>
 
@@ -213,4 +219,7 @@
         </div>
     </footer>
 </body>
+
+<script src="./scripts/calendar/calendarButtons.js"></script>
+
 </html>

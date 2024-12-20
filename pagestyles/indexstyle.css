@@ -36,6 +36,7 @@
 
   max-width: 50px;
   max-height: 75px;
+  cursor: pointer;
 }
 .photoGalleryButtons > img{
   width: 100%;
@@ -88,6 +89,7 @@
   width: 25px;
   height: 25px;
   padding: 0;
+  cursor: pointer;
 }
 .pgControlButton > img{
   width: 100%;
