@@ -76,6 +76,32 @@
         button:hover {border: 1px white solid;}
         button:active {border: 1px black solid; background-color: white;}
         ul {font-family: "OpenSans";}
+
+        @media (max-width: 480px) {
+            .button-img {
+                width: 30px;
+                height: 30px;
+            }
+            .header {font-size: 30px;}
+            .weeks {font-size: 16px;}
+            .calendar {
+                grid-template-columns: repeat(7, 12% [day]);
+                grid-template-rows: repeat(9, 50px [week]);
+            }
+        }
+
+        @media (max-width: 720px) and (orientation: landscape) {
+            .button-img {
+                width: 40px;
+                height: 40px;
+            }
+            .header {font-size: 40px;}
+            .weeks {font-size: 24px;}
+            .calendar {
+                grid-template-columns: repeat(7, 12% [day]);
+                grid-template-rows: repeat(9, 60px [week]);
+            }
+        }
     </style>
 </head>
 <body>
