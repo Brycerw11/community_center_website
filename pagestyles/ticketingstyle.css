@@ -8,16 +8,6 @@
     border-radius: 9px;
     overflow: hidden;
 }
-fieldset{
-    border-radius: 4px;
-}
-legend{
-    font-family: "OpenSans";
-    font-size: 15px;
-}
-label{
-    font-family: "OpenSans";
-}
 .eventDetails{
     font-family: "OpenSans";
     font-weight: 350;
@@ -31,6 +21,6 @@ h6 {
 main > h4{
     text-indent: 25px;
 }
-/* .bgColor{
-    color: white;
-} */
+strong{
+    font-family: "OpenSans";
+}

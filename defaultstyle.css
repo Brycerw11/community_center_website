@@ -160,19 +160,38 @@ h1 {
 .timesNewRoman{
     font-family: 'Times New Roman', Times, serif;
 }
+.smallMargin {
+    margin: 3px;
+}
 
-/* For input boxes in an HTML form*/
-/* default input size is  */
+/* HTML Forms Stuff*/
+/* Default Input Box size is 162px */
 .threeQuartersInputBox {
     width: 122px;
 }
 .halfInputBox {
     width: 81px;
 }
+.thirdInputBox {
+    width: 54px;
+}
 .doubleInputBox {
     width: 324px;
+}
+.bigButton {
+    width: 100px;
 }
 
 .reqInput{
     color: rgb(211, 0, 0);
+}
+fieldset{
+    border-radius: 4px;
+}
+legend{
+    font-family: "OpenSans";
+    font-size: 15px;
+}
+textarea, label{
+    font-family: "OpenSans";
 }

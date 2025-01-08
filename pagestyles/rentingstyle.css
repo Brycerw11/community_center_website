@@ -5,7 +5,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 /* CSS for renting Form */
-form > h2, form > h3, form > h4, form > h5, form > h6, form > p {
+form * { /* All decendants of a form element will not have indent */
     text-indent: 0px;
 }
 .rentingForm {
@@ -14,14 +14,4 @@ form > h2, form > h3, form > h4, form > h5, form > h6, form > p {
     padding: 15px;
     border-radius: 9px;
     overflow: hidden;
-}
-fieldset{
-    border-radius: 4px;
-}
-legend{
-    font-family: "OpenSans";
-    font-size: 15px;
-}
-label{
-    font-family: "OpenSans";
 }
