@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bryce Wahl and Brain Verdugo">
     <meta name="description" content="{Do this later}">
-    <link rel="stylesheet" href="./pagestyles/indexstyle.css">
+    <link rel="stylesheet" href="./pagestyles/rentingstyle.css">
     <link rel="shortcut icon" href="./images/west-mec-arrow.png" type="image/x-icon">
     
     <title>Renting - West-MEC Community Center</title>
@@ -25,11 +25,71 @@
     </nav>
 
     <main>
+        <h1>Renting</h1>
+        <h4>Fill out the following form to no less than 30 days prior to your event's date to recieve pricing information.</h4>
+
+        <form action="#" class="rentingForm">
+            <h2>Request Renting Information Form</h2>
+            <fieldset>
+                <legend>Event Details:</legend>
+
+                <h3>Event Details:</h3>
+
+                <!-- Event Creation -->
+                <label for="adultTixNumSelect">Event Name:</label>
+                <input required type="text" name="evtNameInput" id="evtNameInput">
+                <label for="childTixNumSelect">Number Of Child Tickets:</label>
+                <input required type="number" name="evtDescInput" id="evtDescInput">
+                <h6>There's a maximum of 99 Adult Tickets and 99 Child Tickets per form submittion</h6>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Ticket Details:</legend>
+                <h3>Please Select the Number of Tickets</h3>
+                <h4>Persons at or under the age of 15 qualify for Child Tickets</h4>
+                
+                <label for="adultTixNumSelect">Number Of Adult Tickets:</label>
+                <input required type="number" name="adultTixNumSelect" id="adultTixNumSelect" min="1" max="99">
+                <label for="childTixNumSelect">Number Of Child Tickets:</label>
+                <input required type="number" name="childTixNumSelect" id="childTixNumSelect" min="1" max="99">
+                <h6>There's a maximum of 99 Adult Tickets and 99 Child Tickets per form submittion</h6>
+
+            </fieldset>
+
+        </form>
 
     </main>
 
+    <hr class="footerDivider">
     <footer>
-
+        <div class="footerContacts">
+            <h3 class="timesNewRoman">West-MEC Northeast Campus Community Center</h3>
+            <address>
+                1617 W Williams Dr, Phoenix, AZ 85027
+            </address>
+            <a href="mailto:info@west-mec.org" title="Email Us"><img class="emailUsIcon" src="./images/ContactIcons/emailIcon.svg" alt="Email Us Icon"></a>
+            <a href="tel:+" title="Call Us"><img class="callUsIcon" src="./images/ContactIcons/phoneIcon.svg" alt="Call Us Icon"></a>
+        </div>
+        <div class="footerSocialLinks">
+            <div>
+                <a target="_blank" href="https://www.facebook.com/westmec/">
+                    <img alt="Facebook Logo" class="socialIcons" src="./images/SocialIcons/FacebookLogo.png">
+                </a>
+                <a target="_blank" href="http://www.twitter.com/">
+                    <img alt="X Logo (Twitter)" class="socialIcons" src="./images/SocialIcons/TwitterLogo.png">
+                </a> 
+                <a target="_blank" href="http://www.instagram.com/">
+                    <img alt="Instagram Logo" class="socialIcons" src="./images/SocialIcons/InstagramLogo.png">
+                </a>
+                <a target="_blank" href="http://www.linkedin.com/">
+                    <img alt="Linkedin Logo" class="socialIcons" src="./images/SocialIcons/LinkedInLogo.png">
+                </a>            
+                <a target="_blank" href="http://www.youtube.com/">
+                    <img alt="YouTube Logo" class="socialIcons" src="./images/SocialIcons/YouTubeLogo.png">
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

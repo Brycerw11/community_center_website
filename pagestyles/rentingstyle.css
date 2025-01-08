@@ -1,7 +1,14 @@
 @import url("../defaultstyle.css");
 
-/* Ticketing Form CSS */
-.ticketingForm {
+h2, h3, h4, h5, h6, p {
+    text-indent: 25px;
+}
+
+/* CSS for renting Form */
+form > h2, form > h3, form > h4, form > h5, form > h6, form > p {
+    text-indent: 0px;
+}
+.rentingForm {
     border: black solid 4px;
 
     padding: 15px;
@@ -18,19 +25,3 @@ legend{
 label{
     font-family: "OpenSans";
 }
-.eventDetails{
-    font-family: "OpenSans";
-    font-weight: 350;
-    font-size: 14px;
-}
-
-/* Misc CSS */
-h6 {
-    font-size: .75em;
-}
-main > h4{
-    text-indent: 25px;
-}
-/* .bgColor{
-    color: white;
-} */
