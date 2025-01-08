@@ -36,6 +36,9 @@
 .orangeLink:visited{
     color: #f5a40f;
 }
+.standardOrange {
+    color: #f5a40f;
+}
   
 header{
     background-color: #333;
@@ -101,6 +104,9 @@ footer{
     grid-template-areas: "contacts socials";
     padding: 5px;
 }
+footer * {
+    text-indent: 0px !important;
+}
 @media (max-width: 640px) {
     footer{
         grid-template-columns: 1fr;
@@ -147,7 +153,45 @@ footer{
 h1, h2, h3, h4, h5, h6, p, li{
     font-family: "OpenSans";
 }
+h1 {
+    text-indent: 25px;
+}
 
 .timesNewRoman{
     font-family: 'Times New Roman', Times, serif;
+}
+.smallMargin {
+    margin: 3px;
+}
+
+/* HTML Forms Stuff*/
+/* Default Input Box size is 162px */
+.threeQuartersInputBox {
+    width: 122px;
+}
+.halfInputBox {
+    width: 81px;
+}
+.thirdInputBox {
+    width: 54px;
+}
+.doubleInputBox {
+    width: 324px;
+}
+.bigButton {
+    width: 100px;
+}
+
+.reqInput{
+    color: rgb(211, 0, 0);
+}
+fieldset{
+    border-radius: 4px;
+}
+legend{
+    font-family: "OpenSans";
+    font-size: 15px;
+}
+textarea, label{
+    font-family: "OpenSans";
 }

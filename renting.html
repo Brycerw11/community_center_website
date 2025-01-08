@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bryce Wahl and Brain Verdugo">
     <meta name="description" content="{Do this later}">
-    <link rel="stylesheet" href="./pagestyles/indexstyle.css">
+    <link rel="stylesheet" href="./pagestyles/rentingstyle.css">
     <link rel="shortcut icon" href="./images/west-mec-arrow.png" type="image/x-icon">
     
     <title>Renting - West-MEC Community Center</title>
@@ -25,11 +25,115 @@
     </nav>
 
     <main>
+        <h1>Renting</h1>
+        <h4 class="smallMargin">Fill out the following form to no less than 30 days prior to your event's date to recieve information to assist with event planning and to evaluate rental cost.</h4>
+
+        <br>
+        <form action="#" class="rentingForm">
+
+            <!-- "<span class="reqInput" title="Required">*</span>" is used to denote a required input -->
+            <!-- "<span>  </span>" is used to keep consistant spacing if not a required input. The span contains a blank unicode character that isn't space-->
+            <!-- The invisible character, U+00A0 NO-BREAK SPACE, was chosen because, unlike a regular space, browsers won't automatically truncate the double space into one space -->
+
+            <h2>Request Renting Information Form</h2>
+            <fieldset>
+                <legend>Event Details:</legend>
+
+                <h3>Event Details:</h3>
+
+                <!-- Event Creation -->
+                <span class="reqInput" title="Required">*</span>
+                <label for="evtNameInput">Event Name:</label>
+                <input required type="text" name="evtNameInput" id="evtNameInput" maxlength="120">
+                <br>
+                <span class="reqInput" title="Required">*</span>
+                <label for="evtDescInput">Event Description:</label>
+                <br>
+                <textarea required name="evtDescInput" id="evtDescInput" placeholder="Start typing here" rows="8" cols="40" minlength="25"></textarea>
+                <h6>Be sure to include as many details as possible</h6>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Ticket Details:</legend>
+                <h3>Set Suggested Ticket Prices</h3>
+                
+                <span class="reqInput" title="Required">*</span>
+                <label for="adultTixNumSelect">Price Of Adult Tickets:</label>
+                <input required type="number" name="adultTixNumSelect" id="adultTixNumSelect" min="1" max="99">
+                <span class="reqInput" title="Required">*</span>
+                <label for="childTixNumSelect">Price Of Child Tickets:</label>
+                <input required type="number" name="childTixNumSelect" id="childTixNumSelect" min="1" max="99">
+                <h6>Set price to 0 for free admission</h6>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Info:</legend>
+
+                <h3>Contact Info</h3>
+
+                <span class="reqInput" title="Required">*</span>
+                <label for="nameInput">Full Name: </label>
+                <input required type="text" id="nameInput" name="nameInput" class="threeQuartersInputBox" maxlength="99" placeholder="e.g. John Smith">
+
+                <br>
+                <span class="reqInput" title="Required">*</span>
+                <label for="emailInput">Contact Email Address: </label>
+                <input required type="email" id="emailInput" name="emailInput" class="doubleInputBox" maxlength="321" placeholder="e.g. example@example.com">
+                
+                <br>
+                <span>  </span>
+                <label for="phoneNumInput">Contact Phone Number: </label>
+                <input type="tel" id="phoneNumInput" name="phoneNumInput" class="" maxlength="15" placeholder="e.g. 123-456-7890">
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Submit / Reset Form</legend>
+
+                <button class="bigButton smallMargin" type="reset">Reset</button>
+                <br>
+                <button class="bigButton smallMargin" type="submit">Submit</button>
+            </fieldset>
+
+            <br>
+            <p>You form will be processed within 2-5 business days and you will recieve an email back with further information to the email you provided.</p>
+
+        </form>
 
     </main>
 
+    <hr class="footerDivider">
     <footer>
-
+        <div class="footerContacts">
+            <h3 class="timesNewRoman">West-MEC Northeast Campus Community Center</h3>
+            <address>
+                1617 W Williams Dr, Phoenix, AZ 85027
+            </address>
+            <a href="mailto:info@west-mec.org" title="Email Us"><img class="emailUsIcon" src="./images/ContactIcons/emailIcon.svg" alt="Email Us Icon"></a>
+            <a href="tel:+" title="Call Us"><img class="callUsIcon" src="./images/ContactIcons/phoneIcon.svg" alt="Call Us Icon"></a>
+        </div>
+        <div class="footerSocialLinks">
+            <div>
+                <a target="_blank" href="https://www.facebook.com/westmec/">
+                    <img alt="Facebook Logo" class="socialIcons" src="./images/SocialIcons/FacebookLogo.png">
+                </a>
+                <a target="_blank" href="http://www.twitter.com/">
+                    <img alt="X Logo (Twitter)" class="socialIcons" src="./images/SocialIcons/TwitterLogo.png">
+                </a> 
+                <a target="_blank" href="http://www.instagram.com/">
+                    <img alt="Instagram Logo" class="socialIcons" src="./images/SocialIcons/InstagramLogo.png">
+                </a>
+                <a target="_blank" href="http://www.linkedin.com/">
+                    <img alt="Linkedin Logo" class="socialIcons" src="./images/SocialIcons/LinkedInLogo.png">
+                </a>            
+                <a target="_blank" href="http://www.youtube.com/">
+                    <img alt="YouTube Logo" class="socialIcons" src="./images/SocialIcons/YouTubeLogo.png">
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

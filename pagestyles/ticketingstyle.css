@@ -1,21 +1,12 @@
 @import url("../defaultstyle.css");
 
+/* Ticketing Form CSS */
 .ticketingForm {
     border: black solid 4px;
 
-    padding: 10px;
+    padding: 15px;
     border-radius: 9px;
     overflow: hidden;
-}
-fieldset{
-    border-radius: 4px;
-}
-legend{
-    font-family: "OpenSans";
-    font-size: 15px;
-}
-label{
-    font-family: "OpenSans";
 }
 .eventDetails{
     font-family: "OpenSans";
@@ -23,16 +14,13 @@ label{
     font-size: 14px;
 }
 
+/* Misc CSS */
 h6 {
     font-size: .75em;
 }
-
-.threeQuartersInputBox {
-    width: 122px;
+main > h4{
+    text-indent: 25px;
 }
-.halfInputBox {
-    width: 81px;
-}
-.doubleInputBox {
-    width: 324px;
+strong{
+    font-family: "OpenSans";
 }
