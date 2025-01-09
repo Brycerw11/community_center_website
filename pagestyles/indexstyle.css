@@ -44,6 +44,18 @@
   max-height: 70px;
 }
 
+.pgControlsContainer{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+
+  /* Todo: Make transition between mobile and non-mobile locations */
+
+  /* Puts controls on top of image */
+  position: relative;
+  top: -60px;
+}
 .photoGalleryControls{
   display: flex;
   align-content: center;
@@ -57,18 +69,6 @@
   width: fit-content;
   border-radius: 15px;
 
-  /* Placeholder values, also, scalar values to later be converted into px. */
-  --window-width: 100;
-  --element-width: 100;
-  /* Placeholder values, also, scalar values to later be converted into px. */
-  --true-window-width: calc(var(--window-width) * 0.5px);
-  --alignment-width: calc(calc(var(--element-width) * 1.25px));
-
-  /* Position Tagline at botton of image */
-  position: relative;
-  top: -50px;
-  left: calc(var(--true-window-width) - var(--alignment-width));
-
   filter: opacity(50%);
 
   transition-duration: 0.2s;
@@ -81,8 +81,13 @@
 .photoGalleryControls:hover{
   filter: opacity(100%);
 }
-@media (max-width: 600px){
+@media (max-width: 700px){
   /* Ensure the photoGalleryControls are not obscuring too much of the photo on smaller screens by moving them below the rest of the photoGallery*/
+  .pgControlsContainer{
+    margin-top: 8px;
+    position: static;
+    top: 0;
+  }
   .photoGalleryControls{
     position: static;
     margin: 8px auto;
