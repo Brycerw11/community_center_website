@@ -251,11 +251,8 @@ li {
     flex-direction: column;
     justify-content: space-around;
   }
-  .whyUsContainer > div {min-height: 150px; width: 90%}
+  .whyUsContainer > div {min-height: 150px; width: auto; }
   .whyUsContainer > div > h3{font-size: 18px;}
-  /* account for middle margin being 10px because it add the 2 5px margins together */
-  .whyUs1 {margin-left: 10px;} 
-  .whyUs2 {margin-right: 10px;}
 }
 .whyUs1 {
   /* grid-area: whyUs1; */
