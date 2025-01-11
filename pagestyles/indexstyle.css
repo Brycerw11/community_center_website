@@ -249,14 +249,18 @@ li {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    justify-content: space-around;
   }
-  .whyUsContainer > div {min-height: 150px; width: 100%;}
+  .whyUsContainer > div {min-height: 150px; width: 90%}
   .whyUsContainer > div > h3{font-size: 18px;}
+  /* account for middle margin being 10px because it add the 2 5px margins together */
+  .whyUs1 {margin-left: 10px;} 
+  .whyUs2 {margin-right: 10px;}
 }
 .whyUs1 {
   /* grid-area: whyUs1; */
   background-image: url("../images/MarketingImages/eventSpaceImage.webp");
-  background-position: center;
+  /* background-position: center; */
   background-size: 100%;
 }
 .whyUs2 {
