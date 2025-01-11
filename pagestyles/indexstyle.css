@@ -205,51 +205,69 @@ li {
 .fEvent2{grid-area: event2;}
 .fEvent3{grid-area: event3;}
 
+/* Start of Why Us Section related CSS */
+.whyUsContainer{ 
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
 
-.whyUsContainer{
-  display: grid;
-  border: #333 solid 4px;
-  margin: 5px 10% 5px 10%; /* top right bottom left */
-
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px;
-  grid-template-areas: "whyUs1 whyUs2 whyUs3";
-
+  border: #333 solid 6px;
+  border-radius: 15px;
   overflow: hidden;
+
+  margin: 5px 8% 5px 8%; /* top right bottom left */
   
   transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
+
+  min-height: 250px;
 }
-.whyUsContainer > div{padding: 5px;}
-.whyUsContainer > div > h3{
+.whyUsContainer > div{
+  padding: 5px;
+  min-height: 50px;
+  border: 3px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 5px;
+
+  width: 31%; /* 3% left for spacing between sections (1% per section) */
+}
+.whyUsContainer > div > h3{ /* Header for each why us section */
   font-size: 25px; 
   color: #FFFFFF;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 25px;
   text-align: center;
   font-weight: 600;
   text-shadow: 0 0 12px #111;
+
+  padding: 5px;
 }
-@media (max-width: 700px) {
-  .whyUsConatainer {
-    margin: 5px 7% 5px 7%;
+@media (max-width: 700px) { /* Modifications to make why us look good on mobile */
+  .whyUsContainer {
+    margin: 5px 18% 5px 18%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
   }
-  .whyUsContainer > div > h3{
-    font-size: 18px;
-  }
+  .whyUsContainer > div {min-height: 150px; width: auto; }
+  .whyUsContainer > div > h3{font-size: 18px;}
 }
 .whyUs1 {
-  grid-area: whyUs1;
+  /* grid-area: whyUs1; */
   background-image: url("../images/MarketingImages/eventSpaceImage.webp");
+  /* background-position: center; */
   background-size: 100%;
 }
 .whyUs2 {
-  grid-area: whyUs2;
+  /* grid-area: whyUs2; */
   background-image: url("../images/MarketingImages/convenientLocation.webp");
   background-position: 30px;
   background-size: 100%;
 }
 .whyUs3 {
-  grid-area: whyUs3;
+  /* grid-area: whyUs3; */
   background-image: url("../images/MarketingImages/meWhenSavings.jpg");
   background-size: 100%;
 }
