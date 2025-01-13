@@ -1,5 +1,26 @@
 @import url("../defaultstyle.css");
 
+p {
+  font-size: 15px;
+}
+
+.infoText {
+  margin-left: 25px;
+}
+
+h1 {
+  text-indent: 25px;
+}
+h2 {
+  font-size: 23px;
+}
+
+li {
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+
 /* Start of Page-specific stuff like the Photo Gallery */
 .photoGallery{
   display: flex;
@@ -143,44 +164,17 @@
   }
 }
 
-p {
-  font-size: 15px;
-}
 
-.infoText {
-  margin-left: 25px;
-}
-
-h1 {
-  text-indent: 25px;
-}
-h2 {
-  font-size: 23px;
-}
-
-li {
-  margin-left: 25px;
-  font-size: 16px;
-}
-
+/* Start of Calendar Related CSS */
 .calendarContainer{
-  display: grid;
-  margin: 5px 10% 5px 10%; /* top right bottom left */
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 15rem;
-  grid-template-areas: "event1 event2 event3";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 5px 8% 5px 8%; /* top right bottom left */
   border: #111 solid 4px;
-}
-/* Responsive layout - makes the featured events calendar verticle on smaller screens */
-@media (max-width: 700px) { /* Occures when screen has a width that is under 700 pixels */
-  .calendarContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 15rem);
-    grid-template-areas: "event1" "event2" "event3";
-  }
-  .fEventPicture > img {width: 100%; height: 100%; max-width: 200px;}
-}
 
+  height: auto;
+}
 .featuredEvent{
   margin: 3px;
   border: #333 solid 4px;
@@ -190,20 +184,39 @@ li {
   grid-template-rows: 1fr 1fr;
   gap: 1px;
   grid-template-areas: "eventDateAndTime eventPicture" "eventDescription eventDescription";
+
+  height: auto;
 }
 .featuredEvent h2 {
   font-size: 22px;
 }
 .fEventNameAndTime{grid-area: eventDateAndTime;}
-.fEventPicture{grid-area: eventPicture; overflow: hidden;}
+.fEventPicture{grid-area: eventPicture; overflow: hidden; max-height: 150px;}
 .fEventPicture > img{width: 100%; height: 100%;}
-.fEventDescription{grid-area: eventDescription; overflow: hidden;}
+.fEventDescription{
+  grid-area: eventDescription;
+  text-indent: 25px;
+
+  /* Centers text vertically */
+  display: flex;
+  align-items: center;
+}
 .fEventInfo > p{font-size: 13px; font-weight: 500;}
 .fEventInfo > h2{font-size: 20px;}
 
 .fEvent1{grid-area: event1;}
 .fEvent2{grid-area: event2;}
 .fEvent3{grid-area: event3;}
+@media (max-width: 900px){ .calendarContainer{margin: 5px 5% 5px 5%;}  }
+/* Responsive layout - makes the featured events calendar verticle on smaller screens */
+@media (max-width: 750px) { /* Occures when screen has a width that is under 700 pixels */
+  .calendarContainer{
+    flex-direction: column;
+    margin: 5px 8% 5px 8%;
+  }
+  .fEventPicture > img {height: 100%; max-height: 150px; width: fit-content;}
+}
+
 
 /* Start of Why Us Section related CSS */
 .whyUsContainer{ 
