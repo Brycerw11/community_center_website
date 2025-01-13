@@ -172,13 +172,15 @@ li {
   flex-wrap: nowrap;
   margin: 5px 8% 5px 8%; /* top right bottom left */
   border: #111 solid 4px;
+  border-radius: 10px;
 
   height: auto;
 }
 .featuredEvent{
   margin: 3px;
-  border: #333 solid 4px;
   padding: 5px;
+  border: #333 solid 4px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
