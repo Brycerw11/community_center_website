@@ -118,6 +118,9 @@ footer * {
         width: fit-content;
         margin: auto;
     }
+    footer * {
+        text-align: center;
+    }
 }
 .footerContacts{
     grid-area: contacts;

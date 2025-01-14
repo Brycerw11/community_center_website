@@ -1,5 +1,26 @@
 @import url("../defaultstyle.css");
 
+p {
+  font-size: 15px;
+}
+
+.infoText {
+  margin-left: 25px;
+}
+
+h1 {
+  text-indent: 25px;
+}
+h2 {
+  font-size: 23px;
+}
+
+li {
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+
 /* Start of Page-specific stuff like the Photo Gallery */
 .photoGallery{
   display: flex;
@@ -44,6 +65,18 @@
   max-height: 70px;
 }
 
+.pgControlsContainer{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+
+  /* Todo: Make transition between mobile and non-mobile locations */
+
+  /* Puts controls on top of image */
+  position: relative;
+  top: -60px;
+}
 .photoGalleryControls{
   display: flex;
   align-content: center;
@@ -57,18 +90,6 @@
   width: fit-content;
   border-radius: 15px;
 
-  /* Placeholder values, also, scalar values to later be converted into px. */
-  --window-width: 100;
-  --element-width: 100;
-  /* Placeholder values, also, scalar values to later be converted into px. */
-  --true-window-width: calc(var(--window-width) * 0.5px);
-  --alignment-width: calc(calc(var(--element-width) * 1.25px));
-
-  /* Position Tagline at botton of image */
-  position: relative;
-  top: -50px;
-  left: calc(var(--true-window-width) - var(--alignment-width));
-
   filter: opacity(50%);
 
   transition-duration: 0.2s;
@@ -81,8 +102,13 @@
 .photoGalleryControls:hover{
   filter: opacity(100%);
 }
-@media (max-width: 600px){
+@media (max-width: 700px){
   /* Ensure the photoGalleryControls are not obscuring too much of the photo on smaller screens by moving them below the rest of the photoGallery*/
+  .pgControlsContainer{
+    margin-top: 8px;
+    position: static;
+    top: 0;
+  }
   .photoGalleryControls{
     position: static;
     margin: 8px auto;
@@ -123,7 +149,6 @@
   transition: 0.1s;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
-
 }
 
 /* Responsive layout - makes the photogallery smaller on smaller screens */
@@ -139,113 +164,125 @@
   }
 }
 
-p {
-  font-size: 15px;
-}
 
-.infoText {
-  margin-left: 25px;
-}
-
-h1 {
-  text-indent: 25px;
-}
-h2 {
-  font-size: 23px;
-}
-
-li {
-  margin-left: 25px;
-  font-size: 16px;
-}
-
+/* Start of Calendar Related CSS */
 .calendarContainer{
-  display: grid;
-  margin: 5px 10% 5px 10%; /* top right bottom left */
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 15rem;
-  grid-template-areas: "event1 event2 event3";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 5px 8% 5px 8%; /* top right bottom left */
   border: #111 solid 4px;
-}
-/* Responsive layout - makes the featured events calendar verticle on smaller screens */
-@media (max-width: 700px) { /* Occures when screen has a width that is under 700 pixels */
-  .calendarContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 15rem);
-    grid-template-areas: "event1" "event2" "event3";
-  }
-  .fEventPicture > img {width: 100%; height: 100%; max-width: 200px;}
-}
+  border-radius: 10px;
 
+  height: auto;
+}
 .featuredEvent{
   margin: 3px;
-  border: #333 solid 4px;
   padding: 5px;
+  border: #333 solid 4px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1px;
   grid-template-areas: "eventDateAndTime eventPicture" "eventDescription eventDescription";
+
+  height: auto;
 }
 .featuredEvent h2 {
   font-size: 22px;
 }
 .fEventNameAndTime{grid-area: eventDateAndTime;}
-.fEventPicture{grid-area: eventPicture; overflow: hidden;}
+.fEventPicture{grid-area: eventPicture; overflow: hidden; max-height: 150px;}
 .fEventPicture > img{width: 100%; height: 100%;}
-.fEventDescription{grid-area: eventDescription; overflow: hidden;}
+.fEventDescription{
+  grid-area: eventDescription;
+  text-indent: 25px;
+
+  /* Centers text vertically */
+  display: flex;
+  align-items: center;
+}
 .fEventInfo > p{font-size: 13px; font-weight: 500;}
 .fEventInfo > h2{font-size: 20px;}
 
 .fEvent1{grid-area: event1;}
 .fEvent2{grid-area: event2;}
 .fEvent3{grid-area: event3;}
+@media (max-width: 900px){ .calendarContainer{margin: 5px 5% 5px 5%;}  }
+/* Responsive layout - makes the featured events calendar verticle on smaller screens */
+@media (max-width: 750px) { /* Occures when screen has a width that is under 700 pixels */
+  .calendarContainer{
+    flex-direction: column;
+    margin: 5px 8% 5px 8%;
+  }
+  .fEventPicture > img {height: 100%; max-height: 150px; width: fit-content;}
+}
 
 
-.whyUsContainer{
-  display: grid;
-  border: #333 solid 4px;
-  margin: 5px 10% 5px 10%; /* top right bottom left */
+/* Start of Why Us Section related CSS */
+.whyUsContainer{ 
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
 
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px;
-  grid-template-areas: "whyUs1 whyUs2 whyUs3";
-
+  border: #333 solid 6px;
+  border-radius: 15px;
   overflow: hidden;
+
+  margin: 5px 8% 5px 8%; /* top right bottom left */
   
   transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
+
+  min-height: 250px;
 }
-.whyUsContainer > div{padding: 5px;}
-.whyUsContainer > div > h3{
+.whyUsContainer > div{
+  padding: 5px;
+  min-height: 50px;
+  border: 3px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 5px;
+
+  width: 31%; /* 3% left for spacing between sections (1% per section) */
+}
+.whyUsContainer > div > h3{ /* Header for each why us section */
   font-size: 25px; 
   color: #FFFFFF;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 25px;
   text-align: center;
   font-weight: 600;
   text-shadow: 0 0 12px #111;
+
+  padding: 5px;
 }
-@media (max-width: 700px) {
-  .whyUsConatainer {
-    margin: 5px 7% 5px 7%;
+@media (max-width: 700px) { /* Modifications to make why us look good on mobile */
+  .whyUsContainer {
+    margin: 5px 18% 5px 18%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
   }
-  .whyUsContainer > div > h3{
-    font-size: 18px;
-  }
+  .whyUsContainer > div {min-height: 150px; width: auto; }
+  .whyUsContainer > div > h3{font-size: 18px;}
 }
 .whyUs1 {
-  grid-area: whyUs1;
+  /* grid-area: whyUs1; */
   background-image: url("../images/MarketingImages/eventSpaceImage.webp");
+  /* background-position: center; */
   background-size: 100%;
 }
 .whyUs2 {
-  grid-area: whyUs2;
+  /* grid-area: whyUs2; */
   background-image: url("../images/MarketingImages/convenientLocation.webp");
   background-position: 30px;
   background-size: 100%;
 }
 .whyUs3 {
-  grid-area: whyUs3;
+  /* grid-area: whyUs3; */
   background-image: url("../images/MarketingImages/meWhenSavings.jpg");
   background-size: 100%;
 }
