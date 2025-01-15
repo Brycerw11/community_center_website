@@ -26,9 +26,9 @@
 
     <main>
         <h1>Renting</h1>
-        <h4 class="smallMargin">Fill out the following form to no less than 30 days prior to your event's date to recieve information to assist with event planning and to evaluate rental cost.</h4>
-
+        <h4>Fill out the following form to no less than 30 days prior to your event's date to recieve information to assist with event planning and to evaluate rental cost.</h4>
         <br>
+
         <form action="#" class="rentingForm">
 
             <!-- "<span class="reqInput" title="Required">*</span>" is used to denote a required input -->
@@ -47,12 +47,13 @@
                 <input required type="text" name="evtInput" id="evtNameInput" maxlength="120">
 
                 <br>
+                <span class="reqInput" title="Required">*</span>
                 <label for="evtNameInput">Event Type:</label>
                 <select required id="eventType" name="eventType">
-                    <option value="none" selected disabled hidden>Please Select a Type</option>
-                    <option value="event1">Type 1</option>
-                    <option value="event2">Type 2</option>
-                    <option value="event3">Type 3</option>
+                    <option value="" selected disabled hidden>Please Select a Type</option>
+                    <option value="sport">Sporting Event</option>
+                    <option value="social">Social Event</option>
+                    <option value="other">Other: Please explain in description below</option>
                 </select>
                 <br>
 
@@ -112,6 +113,8 @@
             <p>You form will be processed within 2-5 business days and you will recieve an email back with further information to the email you provided.</p>
 
         </form>
+
+        <h4>You should recieve an email back from info@west-mec.org, all other emails may be fraudulent</h4>
 
     </main>
 
