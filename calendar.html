@@ -5,105 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bryce Wahl and Brain Verdugo">
     <meta name="description" content="{Do this later}">
-    <link rel="stylesheet" href="./pagestyles/indexstyle.css">
+    <link rel="stylesheet" href="./pagestyles/calendarstyle.css">
     <link rel="shortcut icon" href="./images/west-mec-arrow.png" type="image/x-icon">
 
     <title>Calendar - West-MEC Community Center</title>
-
-    <style>
-        .calendar {
-            display: grid;
-            grid-template-columns: repeat(7, 12% [day]);
-            grid-template-rows: repeat(9, 75px [week]);
-            grid-template-areas:"header header header header header header header"
-                                "header header header header header header header"
-                                "weeks weeks weeks weeks weeks weeks weeks"
-                                "days days days days days days days"
-                                "days days days days days days days"
-                                "days days days days days days days"
-                                "days days days days days days days"
-                                "days days days days days days days"
-                                "bottom bottom bottom bottom bottom bottom bottom";
-            justify-content: center;
-            margin-bottom: 20px;
-            font-family: "OpenSans";
-        }
-        .calendar > div {
-            border: 4px solid darkorange;
-        }
-
-        .header {
-            grid-area: header;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 50px;
-            color: darkorange;
-            background-color: navy;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-        .weeks {
-            grid-area: weeks;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            font-size: 30px;
-            color: navy;
-            background-color: darkorange;
-        }
-        .days {
-            color: darkslategray;
-        }
-        .bottom {
-            grid-area: bottom;
-            display: flex;
-            height: 10px;
-            background-color: darkorange;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-        .button-img {
-            width: 50px;
-            height: 50px;
-            margin-top: 3px;
-        }
-        button {
-            background-color: darkorange;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        button:hover {border: 1px white solid;}
-        button:active {border: 1px black solid; background-color: white;}
-        ul {font-family: "OpenSans";}
-
-        @media (max-width: 480px) {
-            .button-img {
-                width: 30px;
-                height: 30px;
-            }
-            .header {font-size: 30px;}
-            .weeks {font-size: 16px;}
-            .calendar {
-                grid-template-columns: repeat(7, 12% [day]);
-                grid-template-rows: repeat(9, 50px [week]);
-            }
-        }
-
-        @media (max-width: 720px) and (orientation: landscape) {
-            .button-img {
-                width: 40px;
-                height: 40px;
-            }
-            .header {font-size: 40px;}
-            .weeks {font-size: 24px;}
-            .calendar {
-                grid-template-columns: repeat(7, 12% [day]);
-                grid-template-rows: repeat(9, 60px [week]);
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -180,12 +85,14 @@
             <div class="bottom"></div>
         </div>
 
-        <h2>Events:</h2>
-        <ul>
-            <li>FBLA State Leadership Competition (4/1/2025 - 4/3/2025)</li>
-            <li>Event Name 2 (4/23/2025 @ 1:30 PM MST)</li>
-            <li>Event Name 3 (4/23/2099 @ 1:30 PM MST)</li>
-        </ul>
+        <div class="calendarEvents">
+            <h2>Events:</h2>
+            <ul>
+                <li>FBLA State Leadership Competition (4/1/2025 - 4/3/2025)</li>
+                <li>Event Name 2 (4/23/2025 @ 1:30 PM MST)</li>
+                <li>Event Name 3 (4/23/2099 @ 1:30 PM MST)</li>
+            </ul>
+        </div>
     </main>
 
     <hr class="footerDivider">
@@ -218,6 +125,11 @@
             </div>
         </div>
     </footer>
+            
+    <div class="footerCopyright">
+        © 2025 West-MEC Community Centers
+    </div>
+
 </body>
 
 <script src="./scripts/calendar/calendarButtons.js"></script>

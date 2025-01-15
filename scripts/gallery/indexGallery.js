@@ -7,6 +7,11 @@ const photo = document.getElementById("PhotoGalleryPhoto");
 const switchBar = document.getElementById("gallerySwitchBar");
 const switchBarParent = document.getElementById("gallerySwitchBarContainer");
 
+//index.html is in the root folder so the file paths should reflect that
+const pauseIconUrl = "./images/PhotoGallery/pauseIcon.svg";
+const playIconUrl = "./images/PhotoGallery/playIcon.svg";
+const pausePlayBttn = document.getElementById("pausePlayBttnImg")
+
 function leftButtonClick(){
 
     photoNum--; //Goes backwards in the cycle (left)
@@ -50,9 +55,11 @@ var isTimerPaused = false;
 function pauseAutoShift(){
     if(isTimerPaused){
         isTimerPaused = false;
+        pausePlayBttn.src = pauseIconUrl;
     }
     else{
         isTimerPaused = true;
+        pausePlayBttn.src = playIconUrl;
     }
 }
 
