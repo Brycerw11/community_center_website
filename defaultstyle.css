@@ -153,6 +153,17 @@ footer * {
     width: 35px;
 }
 
+.footerCopyright{
+    display: flex;
+
+    width: 100%;
+    justify-content: center;
+
+    margin-bottom: 5px;
+}
+
+/* End of Footer Comments Start of Generic Comments */
+
 h1, h2, h3, h4, h5, h6, p, li{
     font-family: "OpenSans";
 }
