@@ -44,8 +44,18 @@
                 <!-- Event Creation -->
                 <span class="reqInput" title="Required">*</span>
                 <label for="evtNameInput">Event Name:</label>
-                <input required type="text" name="evtNameInput" id="evtNameInput" maxlength="120">
+                <input required type="text" name="evtInput" id="evtNameInput" maxlength="120">
+
                 <br>
+                <label for="evtNameInput">Event Type:</label>
+                <select required id="eventType" name="eventType">
+                    <option value="none" selected disabled hidden>Please Select a Type</option>
+                    <option value="event1">Type 1</option>
+                    <option value="event2">Type 2</option>
+                    <option value="event3">Type 3</option>
+                </select>
+                <br>
+
                 <span class="reqInput" title="Required">*</span>
                 <label for="evtDescInput">Event Description:</label>
                 <br>

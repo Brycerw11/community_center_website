@@ -3,6 +3,9 @@
 h2, h3, h4, h5, h6, p {
     text-indent: 25px;
 }
+h2{
+    font-size: 12px !important;
+}
 
 /* CSS for renting Form */
 form * { /* All decendants of a form element will not have indent */
