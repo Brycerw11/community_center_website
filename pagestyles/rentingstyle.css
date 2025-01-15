@@ -16,5 +16,5 @@ form * { /* All decendants of a form element will not have indent */
 
     padding: 15px;
     border-radius: 9px;
-    overflow: hidden;
+    overflow-y: hidden;
 }

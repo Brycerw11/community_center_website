@@ -181,6 +181,7 @@ h1 {
 /* HTML Forms Stuff*/
 form {
     margin: 0px 25px;
+    overflow-x: auto;
 }
 
 /* Default Input Box size is 162px */
