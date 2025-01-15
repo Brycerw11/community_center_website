@@ -92,3 +92,7 @@ ul {font-family: "OpenSans";}
         grid-template-rows: repeat(9, 60px [week]);
     }
 }
+
+.calendarEvents{
+    margin-left: 25px;
+}

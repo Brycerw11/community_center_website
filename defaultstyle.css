@@ -179,6 +179,10 @@ h1 {
 }
 
 /* HTML Forms Stuff*/
+form {
+    margin: 0px 25px;
+}
+
 /* Default Input Box size is 162px */
 .threeQuartersInputBox {
     width: 122px;

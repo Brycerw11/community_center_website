@@ -1,5 +1,8 @@
 @import url("../defaultstyle.css");
 
+p{
+    margin-left: 25px;
+}
 .seatingChart {
     border: 3px black dashed;
     width: 75%;
