@@ -45,18 +45,18 @@
 
                 <!-- Event Selection -->
                 <span class="reqInput" title="Required">*</span>
-                <label for="eventSelection">Please Select the Event:</label>
-                <select required id="eventSelection" name="eventSelection">
+                <label for="eventSelectionName">Please Select the Event:</label>
+                <select required id="eventSelection" name="eventSelectionName" onchange="onEventUpdate()">
                     <option value="none" selected disabled hidden>Please Select an Event</option>
-                    <option value="event1">Event 1</option>
-                    <option value="event2">Event 2</option>
-                    <option value="event3">Event 3</option>
+                    <option value="fblaAzState">FBLA Arizona State Competition</option>
+                    <option value="hsBasketballGame">Liberty HS vs Deer Valley HS Varsity Basketball Game</option>
+                    <option value="maricopaChess">Maricopa County Chess Tournament</option>
                 </select>
                 <h5><a href="./calendar.html" target="_blank" class="orangeLink">Click Here to Check The Event Calendar</a></h5>
 
-                <h4>Event Name:</h4> <span class="eventDetails">{Please Select An Event}</span>
-                <h4>Event Date:</h4> <span class="eventDetails">{Please Select An Event}</span>
-                <h4>Event Description:</h4> <span class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Name:</h4> <span id="evtNameSpan" class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Date:</h4> <span id="evtDateSpan" class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Description:</h4> <span id="evtDescSpan" class="eventDetails">{Please Select An Event}</span>
 
             </fieldset>
 
@@ -220,5 +220,6 @@
         © 2025 West-MEC Community Centers
     </div>
 
+    <script src="./scripts/ticketing/ticketingEventDetails.js"></script>
 </body>
 </html>
