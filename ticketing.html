@@ -45,18 +45,18 @@
 
                 <!-- Event Selection -->
                 <span class="reqInput" title="Required">*</span>
-                <label for="eventSelectionName">Please Select the Event:</label>
+                <label for="eventSelection">Please Select the Event:</label>
                 <select required id="eventSelection" name="eventSelectionName" onchange="onEventUpdate()">
                     <option value="none" selected disabled hidden>Please Select an Event</option>
                     <option value="fblaAzState">FBLA Arizona State Competition</option>
                     <option value="hsBasketballGame">Liberty HS vs Deer Valley HS Varsity Basketball Game</option>
-                    <option value="maricopaChess">Maricopa County Chess Tournament</option>
+                    <option value="maricopaChess">Maricopa County Regional Chess Tournament</option>
                 </select>
                 <h5><a href="./calendar.html" target="_blank" class="orangeLink">Click Here to Check The Event Calendar</a></h5>
 
-                <h4>Event Name:</h4> <span id="evtNameSpan" class="eventDetails">{Please Select An Event}</span>
-                <h4>Event Date:</h4> <span id="evtDateSpan" class="eventDetails">{Please Select An Event}</span>
-                <h4>Event Description:</h4> <span id="evtDescSpan" class="eventDetails">{Please Select An Event}</span>
+                <h4>Event Name:</h4> <div id="evtNameDiv" class="eventDetails">{Please Select An Event}</div>
+                <h4>Event Date:</h4> <div id="evtDateDiv" class="eventDetails">{Please Select An Event}</div>
+                <h4>Event Description:</h4> <div id="evtDescDiv" class="eventDetails">{Please Select An Event}</div>
 
             </fieldset>
 
@@ -155,7 +155,7 @@
                 <br>
 
                 <span class="reqInput" title="Required">*</span>
-                <label for="cardExpInput">Card Expiration Date: </label>
+                <label for="cardExpInputMonth">Card Expiration Date: </label>
                 <input required type="text" id="cardExpInputMonth" name="cardExpInputMonth" class="thirdInputBox" maxlength="2" minlength="2" placeholder="e.g. 02">
                 <span style="font-weight: 600;"> / </span>
                 <input required type="text" id="cardExpInputYear" name="cardExpInputYear" class="thirdInputBox" maxlength="2" minlength="2" placeholder="26">

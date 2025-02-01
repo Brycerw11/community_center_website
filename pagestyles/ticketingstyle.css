@@ -10,9 +10,12 @@
 }
 .eventDetails{
     font-family: "OpenSans";
-    font-weight: 350;
+    font-weight: 400;
     font-size: 14px;
+    
+    margin-left: 1em; /* Mimics a text indent in a span tag */
 }
+.multiDayEventDaySeperator{ margin-left: 1em; }
 
 /* Misc CSS */
 h6 {
