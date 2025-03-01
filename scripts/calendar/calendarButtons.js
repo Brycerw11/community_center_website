@@ -1,28 +1,50 @@
 var listOfMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var monthIndex = 0;
-var yearNum = 2025;
+const currentDate = new Date();
+var year = currentDate.getFullYear();
+var month = currentDate.getMonth();
+var date = currentDate.getDate();
+var firstDay = new Date(year,month,1);
+var lastDay = new Date(year,month,0).getDate();
+var day = firstDay.getDay() + 3;
 
-const month = document.getElementById("calendarMonth");
-const year = document.getElementById("calendarYear");
+document.getElementById("calendarMonth").innerHTML = listOfMonths[month];
+document.getElementById("calendarYear").innerHTML = year;
+
+for (let i = 0; i < lastDay; i++) {
+    $(`.days:nth-of-type(${day+i})`).html(i+1)
+}
 
 function monthBack() {
-    if (monthIndex != 0) {
-        monthIndex--;
+    $(".days").each(function(){$(this).html("")});
+    if (month != 0) {
+        month--;
     } else {
-        monthIndex = 11;
-        yearNum--;
+        month = 11;
+        year--;
     }
-    month.textContent = String(listOfMonths[monthIndex]);
-    year.textContent = String(yearNum);
+    updateHTML();
 }
 
 function monthForward() {
-    if (monthIndex != 11) {
-        monthIndex++;
+    $(".days").each(function(){$(this).html("")});
+    if (month != 11) {
+        month++;
     } else {
-        monthIndex = 0;
-        yearNum++;
+        month = 0;
+        year++;
     }
-    month.textContent = String(listOfMonths[monthIndex]);
-    year.textContent = String(yearNum);
+    document.getElementById("calendarMonth").innerHTML = listOfMonths[month];
+    document.getElementById("calendarYear").innerHTML = year;
+    updateHTML();
+}
+
+function updateHTML() {
+    firstDay = new Date(year,month,1);
+    lastDay = new Date(year,month,0).getDate();
+    day = firstDay.getDay() + 3;
+    document.getElementById("calendarMonth").innerHTML = listOfMonths[month];
+    document.getElementById("calendarYear").innerHTML = year;
+    for (let i = 0; i < lastDay; i++) {
+        $(`.days:nth-of-type(${day+i})`).html(i+1)
+    }
 }
