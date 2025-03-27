@@ -29,6 +29,9 @@
 .standardIndent{
     text-indent: 25px;
 }
+.inline-spacing::after{
+    content: "—";
+}
   
 .orangeLink {
     color: #f5a40f;
@@ -74,6 +77,7 @@ nav > a {
   
     /* top right bottom left */
     padding: 14px 16px;
+    min-width: 60px;
   
     /* No underline */
     text-decoration: none;
@@ -97,12 +101,13 @@ main{
     margin-top: 24px;
 }
 footer{
-    margin: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "contacts socials";
+    
     padding: 5px;
+    margin: 8px;
 }
 footer * {
     text-indent: 0px !important;
@@ -137,6 +142,15 @@ footer * {
 .footerSocialLinks a {
     text-decoration: none;
 }
+.footerCopyright{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    width: 100%;
+    justify-content: center;
+
+    margin-bottom: 5px;
+}
 .socialIcons{
     margin: 1px;
     height: 50px;
@@ -153,14 +167,6 @@ footer * {
     width: 35px;
 }
 
-.footerCopyright{
-    display: flex;
-
-    width: 100%;
-    justify-content: center;
-
-    margin-bottom: 5px;
-}
 
 /* End of Footer Comments Start of Generic Comments */
 

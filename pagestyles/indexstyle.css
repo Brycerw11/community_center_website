@@ -3,18 +3,18 @@
 p {
   font-size: 15px;
 }
-
 .infoText {
   margin-left: 25px;
 }
-
 h1 {
   text-indent: 25px;
 }
 h2 {
   font-size: 23px;
 }
-
+h3 a.orangeLink{
+  font-size: 1rem;
+}
 li {
   margin-left: 25px;
   font-size: 16px;
@@ -165,26 +165,28 @@ li {
 }
 
 
-/* Start of Calendar Related CSS */
+/* Start of CSS relating to the featured calendar*/
 .calendarContainer{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 5px 8% 5px 8%; /* top right bottom left */
+  margin: 5px 7% 5px 7%; /* top right bottom left */
   border: #111 solid 5px;
   border-radius: 10px;
 
   height: auto;
 }
 .featuredEvent{
-  margin: 3px;
+  width: 31%;
   padding: 5px;
   border: #333 solid 4px;
   border-radius: 10px;
+  gap: 1px;
+  margin: 3px;
+  
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1px;
+  grid-template-rows: 1fr auto;
   grid-template-areas: "eventDateAndTime eventPicture" "eventDescription eventDescription";
 
   height: auto;
@@ -193,18 +195,31 @@ li {
   font-size: 22px;
 }
 .fEventNameAndTime{grid-area: eventDateAndTime;}
-.fEventPicture{grid-area: eventPicture; overflow: hidden; max-height: 150px;}
-.fEventPicture > img{width: 100%; height: 100%;}
+.fEventPicture{
+  grid-area: eventPicture; 
+  overflow: hidden; 
+  max-height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fEventPicture > img{width: 100%; height: auto;}
 .fEventDescription{
   grid-area: eventDescription;
+
   text-indent: 25px;
+  font-family: "OpenSans";
+  font-size: .85rem;
+
+  min-height: 55px;
 
   /* Centers text vertically */
   display: flex;
   align-items: center;
 }
 .fEventInfo > p{font-size: 13px; font-weight: 500;}
-.fEventInfo > h2{font-size: 20px;}
+.fEventInfo > h2{font-size: 1.15rem;}
 
 .fEvent1{grid-area: event1;}
 .fEvent2{grid-area: event2;}
