@@ -93,11 +93,7 @@ li {
   filter: opacity(50%);
 
   transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
   transition-property: filter; /* ensures the transition only affects the opacity filter and nothing else */
-  -webkit-transition-property: filter;
-  -moz-transition-property: filter;
 }
 .photoGalleryControls:hover{
   filter: opacity(100%);
@@ -146,7 +142,7 @@ li {
   border-radius: 10px;
 }
 .tempTransition{
-  transition: 0.1s;
+  transition: transform 0.1s;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
 }
@@ -170,11 +166,14 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 5px 7% 5px 7%; /* top right bottom left */
+  
   border: #111 solid 5px;
   border-radius: 10px;
+  margin: 5px 7% 5px 7%; /* top right bottom left */
 
   height: auto;
+  align-items: stretch; /* Auto sets height for children elements */
+  justify-content: space-evenly;
 }
 .featuredEvent{
   width: 31%;
@@ -186,10 +185,8 @@ li {
   
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
   grid-template-areas: "eventDateAndTime eventPicture" "eventDescription eventDescription";
-
-  height: auto;
 }
 .featuredEvent h2 {
   font-size: 22px;
@@ -205,6 +202,11 @@ li {
   align-items: center;
 }
 .fEventPicture > img{width: 100%; height: auto;}
+.fEventInfo{
+  max-height: fit-content;
+}
+.fEventInfo > p{font-size: 13px; font-weight: 500;}
+.fEventInfo > h2{font-size: 1.15rem;}
 .fEventDescription{
   grid-area: eventDescription;
 
@@ -218,15 +220,24 @@ li {
   display: flex;
   align-items: center;
 }
-.fEventInfo > p{font-size: 13px; font-weight: 500;}
-.fEventInfo > h2{font-size: 1.15rem;}
 
 .fEvent1{grid-area: event1;}
 .fEvent2{grid-area: event2;}
 .fEvent3{grid-area: event3;}
+
+@media (max-width: 800px) {
+  /* Make Featured Events verticle on smaller screens */
+  .featuredEvent{
+    width: 95%;
+  }
+}
+
+
+/* Start of Calendar CSS */
+/* Calendar Responsive layouts */
 @media (max-width: 900px){ .calendarContainer{margin: 5px 5% 5px 5%;}  }
-/* Responsive layout - makes the featured events calendar verticle on smaller screens */
-@media (max-width: 750px) { /* Occures when screen has a width that is under 700 pixels */
+/* makes the featured events calendar verticle on smaller screens */
+@media (max-width: 750px) {
   .calendarContainer{
     flex-direction: column;
     margin: 5px 8% 5px 8%;

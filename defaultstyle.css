@@ -15,6 +15,13 @@
     margin: 0;
 }
 
+h6{
+    font-size: 0.75rem;
+}
+button{
+    font-family: "OpenSans";
+}
+
 .floatLeft{
     float: left;
 }
@@ -42,6 +49,10 @@
 .standardOrange {
     color: #f5a40f;
 }
+.orangeUnderline{
+    text-decoration: underline;
+    text-decoration-color: #f5a40f;
+}
   
 header{
     background-color: #333;
@@ -63,6 +74,13 @@ nav {
     top: 0;
   
     z-index: 5;
+}
+@media (max-width: 700px){
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
   
 .nav-item {
@@ -141,6 +159,12 @@ footer * {
 /* Gets rid of the URL underline that appears between the social link icons */
 .footerSocialLinks a {
     text-decoration: none;
+}
+.footerSocialLinks a img {
+    transition: background-color 0.5s;
+}
+.footerSocialLinks a img:hover {
+    background-color: lightgray;
 }
 .footerCopyright{
     display: flex;
