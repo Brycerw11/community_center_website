@@ -12,6 +12,7 @@
                         "days days days days days days days"
                         "days days days days days days days"
                         "days days days days days days days"
+                        "days days days days days days days"
                         "bottom bottom bottom bottom bottom bottom bottom";
     justify-content: center;
     margin-bottom: 20px;
@@ -66,6 +67,10 @@ button {
 button:hover {border: 1px white solid;}
 button:active {border: 1px black solid; background-color: white;}
 ul {font-family: "OpenSans";}
+
+.today {
+    background-color: blue;
+}
 
 @media (max-width: 480px) {
     .button-img {
