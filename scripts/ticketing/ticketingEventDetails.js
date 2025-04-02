@@ -17,7 +17,7 @@ const stateCompEvtDeets = {
 };
 const libertyVsDeerBasketballEvtDeets = {
     eventName: "Liberty HS vs Varsity Basketball Game",
-    eventDescription: "Experience this exciting game from two top-level high school teams! Only at West-MEC Community Center.",
+    eventDescription: "Experience this exciting game from two top-level high school teams! Only at the West-MEC Community Center.",
 
     eventStartDate: new Date('April 10, 2025 16:30:00 GMT-07:00'),
     eventEndDate: new Date('April 10, 2025 18:30:00 GMT-07:00'),
@@ -25,7 +25,7 @@ const libertyVsDeerBasketballEvtDeets = {
 };
 const maricopaChessEvtDeets = {
     eventName: "Maricopa Regional Chess Tournament",
-    eventDescription: "A chess tournament for residents of the Maricopa County.",
+    eventDescription: "A chess tournament for residents of the Maricopa County. Competitors can choose to play in either a double-elimination Blitz bracket or a single-elimination Classical bracket.",
 
     eventStartDate: new Date('May 4, 2025 12:30:00 GMT-07:00'),
     eventEndDate: new Date('May 4, 2025 15:45:00 GMT-07:00'),
